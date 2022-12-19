@@ -50,7 +50,7 @@ function SkullCandyh1({
 
   return (
     <>
-      <div className='flex flex-row gap-x-20 h-min h1Banner relative z-0 overflow-x-hidden bg-black'>
+      <div className='flex flex-row gap-x-20 h-full h1Banner relative z-0 overflow-x-hidden bg-black'>
         <div className='leading-loose w-full text-white my-72 ml-20 flex flex-col gap-y-1'>
           <div className='mb-5'>
             <h1 className='text-5xl font-extrabold w-20'>{productTitle}</h1>
@@ -154,7 +154,7 @@ function SkullCandyh1({
         </div>
       </div>
 
-      <div className='h-screen secondImageProductPage text-white leading-loose'>
+      <div className='h-screen secondImageProductPage bg-black text-white leading-loose'>
         <div className='ml-20 pt-60'>
           <h1 className='text-4xl font-extrabold mb-4'>All love, all year</h1>
           <p className='w-1/3'>

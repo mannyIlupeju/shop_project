@@ -5,9 +5,9 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Shop = ({shopList}) => {
   return (
-    <div className='bg-black h-max'>
-      <div className=''>
-        <div className='font-extrabold text-center text-4xl p-10'>
+    <div className=' h-full'>
+      <div className='mt-32'>
+        <div className='font-extrabold text-center text-4xl text-zinc-700 p-10'>
           <h2>SHOP ALL</h2>
         </div>
         <div className='grid grid-cols-2 gap-y-10 p-10 -mt-5 text-sm 2xl:grid-cols-4 w-max 2xl:gap-x-40 gap-x-10 xl:grid mx-auto justify-center'>
@@ -44,10 +44,10 @@ const Shop = ({shopList}) => {
                       <img src={items.altImage3} width={80} />
                     </div>
                     <div className='flex justify-center'>
-                      <h3>{items.desc}</h3>
+                      <h3 className='text-zinc-700'>{items.desc}</h3>
                     </div>
                     <div className='flex justify-center'>
-                      <span>{items.price}</span>
+                      <span className='text-zinc-700'>{items.price}</span>
                     </div>
                   </Link>
                 </div>

@@ -23,7 +23,7 @@ const SectionTwo = ({items, setItems}) => {
 
   
   return (
-    <div className='mx-auto container overflow-x-hidden h-min '>
+    <div className='mx-auto container 2xl:overflow-x-hidden h-min my-20 text-zinc-800'>
       <div className='p-10 2xl:mt-1 2xl:mx-6 lg:mt-10 md:mt-10'>
         <h2 className='text-left md:mt-9 text-7xl font-bold'>
           100 Selections to choose from
@@ -42,7 +42,7 @@ const SectionTwo = ({items, setItems}) => {
         </div>
 
         <div className='carousel-wrapper'>
-          <div className='flex mx-10'>
+          <div className='flex mx-10 '>
             <Carousel breakPoints={breakPoints}>
               {Products.map((items, index) => {
                 return (
@@ -59,10 +59,12 @@ const SectionTwo = ({items, setItems}) => {
                       />
                       <div className='text-amber-100 mx-3'>
                         <div className='flex flex-row justify-between'>
-                          <div>{items.name}</div>
-                          <div className='justify-end'>{items.price}</div>
+                          <div className='text-zinc-700'>{items.name}</div>
+                          <div className='justify-end text-zinc-800'>
+                            {items.price}
+                          </div>
                         </div>
-                        <div>{items.tags}</div>
+                        <div className='text-zinc-700'>{items.tags}</div>
                       </div>
                     </Link>
                   </div>
@@ -98,7 +100,7 @@ const SectionThree = () => {
 
  return (
    <div className='m-auto h-fit container'>
-     <div className='headlineThree m-24 2xl:mt-10'>
+     <div className='headlineThree m-24 2xl:mt-10 text-zinc-700'>
        <div className='headLineText font-bold pr-8 pt-12 -ml-1'>
          <h2 className='text-7xl'>Welcome to Future-Proof Audio</h2>
          <div className='headlineSubText text-xl '>
@@ -111,20 +113,20 @@ const SectionThree = () => {
        </div>
 
        <div className='grid grid-cols-1 2xl:grid-cols-2 lg:grid-cols-2 gap-10 mt-20'>
-            {futureProofAudio.map((items) =>{
-                const {item, index, images, id, className} = items
-                return (
-                  <div key={id} className='cursor-pointer'>
-                    <img src={images} 
-                    className={className}
-                    onMouseEnter={()=> productItem(id)}
-                    />
-                    {product.id === id ? button : null}
-                  </div>
-                )
-            })}
+         {futureProofAudio.map((items) => {
+           const { item, index, images, id, className } = items;
+           return (
+             <div key={id} className='cursor-pointer'>
+               <img
+                 src={images}
+                 className={className}
+                 onMouseEnter={() => productItem(id)}
+               />
+               {product.id === id ? button : null}
+             </div>
+           );
+         })}
        </div>
-
      </div>
    </div>
  );
@@ -133,7 +135,7 @@ const SectionThree = () => {
 const SectionFour = () => {
 
   return (
-    <div className='w-fit m-auto container mt-40'>
+    <div className='w-fit m-auto container my-40'>
       <div className='flex flex-row justify-center cta-banner rounded-md'>
         <div className='flex flex-col relative top-20 ml-16 text-zinc-700'>
           <h1 className='text-6xl md:text-4xl font-extrabold'>Sounds for Everyone</h1>

@@ -3,7 +3,7 @@ import { Link, NavLink} from 'react-router-dom'
 
 function Shop() {
   return (
-    <div className='bg-zinc-900 h-min p-10 relative top-0 z-50 overflow-x-hidden'>
+    <div className='container dropdown-menu h-min p-10 relative -top-5 z-50 overflow-x-hidden'>
       <div className='grid grid-cols-5 text-xs text-left'>
         <div className='border-r-4 ml-5'>
           <ul>

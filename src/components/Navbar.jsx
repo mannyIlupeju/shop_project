@@ -21,7 +21,7 @@ const Navbar = ({
 
   return (
     <>
-      <div className='fixed top-0 left-0 z-50 bg-slate-900 w-screen p-8'>
+      <div className='fixed top-0 left-0 z-50 nav-color text-zinc-800 w-screen p-8'>
         <nav className='navbar'>
           <div className='container mx-auto'>
             <div className='flex-none px-2 mx-2'>
@@ -68,8 +68,7 @@ const Navbar = ({
                   onMouseLeave={() => {
                     setDropDown(false);
                   }}
-                >
-                </div>
+                ></div>
 
                 <NavLink
                   onMouseOver={mouseOver}
@@ -87,7 +86,7 @@ const Navbar = ({
                   <FaUser size={26} />
                 </Link>
 
-               <CartModal saved={saved}/>
+                <CartModal saved={saved} />
 
                 <BsSearch
                   size={26}
@@ -112,8 +111,10 @@ const Navbar = ({
           </div>
         </nav>
 
-        <div className='fixed top-15 left-0 z-50 text-center bg-black p-2 font-light text-xs w-screen'>
-          <p>Free Shipping from $100</p>
+        <div className='fixed top-15 left-0 z-0 text-center p-2 font-light text-xs w-screen bg-black text-zinc-200'>
+          <div className='border-red-800'>
+            <p>Free Shipping from $100</p>
+          </div>
         </div>
       </div>
     </>

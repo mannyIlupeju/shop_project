@@ -20,14 +20,28 @@
 
 /*Fonts*/
 
-/* :root {
+:root {
+  background-color: #D3D5D7;
+}
 
-  background-color: red;
-} */
+
 /*background images */
 
 
+/*navbar*/
+.nav-color {
+  background:#d3d5d7;
+}
+/*hero banner*/
 
+.hero-color {
+  background-color: #CF5C36;
+}
+
+/*home page*/
+
+
+/*other pages*/
 
 
 
@@ -378,3 +392,15 @@
     place-items: center;
 }
 
+.footer-background {
+  background-color: black;
+ -webkit-clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
+border: 2px solid grey;
+
+}
+
+.dropdown-menu {
+clip-path: polygon(0 0, 100% 0%, 77% 100%, 0% 100%);
+background-color:#D3D5D7 ;
+}

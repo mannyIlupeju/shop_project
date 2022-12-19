@@ -2,13 +2,13 @@ import Button from "../components/Shared/Button";
 
 const HeroBanner = () => {
   return (
-    <div className='hero h-screen 2xl:mb-2 lg:mb-10 md:mb-10'>
+    <div className='hero h-min 2xl:mb-2 lg:mb-10 md:mb-10 2xl:overflow-hidden md:overflow-x-hidden'>
       <div className='p-16 hero-overlay flex 2xl:flex-row justify-center lg:flex-row md:flex-col sm:flex-col'>
-        <div className='text-neutral-content justify-center 2xl:flex flex-row leading-loose mx-15 '>
+        <div className='text-neutral-content justify-center 2xl:flex flex-row leading-loose mx-15 w-screen'>
           {/**Setting up the hero banner headline */}
-          <div className=''>
-            <div className='mt-40'>
-              <h1 className='text-7xl font-bold text-teal-500 '>
+          <div className='relative left-40 md:left-28'>
+            <div className='2xl:mt-40 md:mt-20'>
+              <h1 className='text-6xl font-extrabold text-teal-500 '>
                 Major III Bluetooth
               </h1>
               <p>A Modern Classic Re-engineered for $149</p>
@@ -30,8 +30,8 @@ const HeroBanner = () => {
           </div>
 
           <div className="flex">
-             <div className='relative bottom-30 w-fit'>
-              <img src='/images/heroUntitled.png' alt="girl listening to music" width={1500}/>
+             <div className='relative bottom-40 w-fit md:bottom-2'>
+              <img src='/images/heroUntitled.png' alt="girl listening to music" className="block" width={1000}/>
              </div>
           </div>
 

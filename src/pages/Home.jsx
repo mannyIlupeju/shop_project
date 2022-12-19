@@ -133,7 +133,7 @@ const SectionFour = () => {
   return (
     <div className=''>
       <div className='w-fit'>
-       <img src='/public/images/' alt="dealer-banner"/>
+       <img src='/images/dealer-banner.png' alt="dealer-banner"/>
       </div>
     </div>
   );

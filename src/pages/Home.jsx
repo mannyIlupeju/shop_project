@@ -135,16 +135,16 @@ const SectionFour = () => {
   return (
     <div className='w-fit m-auto container mt-40'>
       <div className='flex flex-row justify-center cta-banner rounded-md'>
-        <div className='flex flex-col relative top-28 ml-16 text-zinc-700'>
-          <h1 className='text-6xl font-extrabold'>Sounds for Everyone</h1>
-          <div className='mt-8 text-lg font-semibold '>
+        <div className='flex flex-col relative top-20 ml-16 text-zinc-700'>
+          <h1 className='text-6xl md:text-4xl font-extrabold'>Sounds for Everyone</h1>
+          <div className='mt-8 text-lg md:text-sm font-semibold '>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             <p>
               High quality noise reduction sophisticated aesthetics nice
               material
             </p>
           </div>
-          <div className='mt-20'>
+          <div className='mt-20 md:mt-6'>
             <h2>Listen to our holiday special on</h2>
           </div>
           <div className='flex flex-row gap-x-5 mt-2'>

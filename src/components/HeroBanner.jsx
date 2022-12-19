@@ -2,7 +2,7 @@ import Button from "../components/Shared/Button";
 
 const HeroBanner = () => {
   return (
-    <div className='hero h-min 2xl:mb-2 lg:mb-10 md:mb-10 2xl:overflow-hidden md:overflow-x-hidden'>
+    <div className='hero h-fit 2xl:mb-2 lg:mb-10 md:mb-10 2xl:overflow-hidden md:overflow-x-hidden'>
       <div className='p-16 hero-overlay flex 2xl:flex-row justify-center lg:flex-row md:flex-col sm:flex-col'>
         <div className='text-neutral-content justify-center 2xl:flex flex-row leading-loose mx-15 w-screen'>
           {/**Setting up the hero banner headline */}

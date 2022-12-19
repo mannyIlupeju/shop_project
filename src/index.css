@@ -73,7 +73,10 @@
   background-position-y: 4rem;
 }
 
-
+.cta-banner {
+  background: rgb(248,247,250);
+  background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(173,16,159,1) 0%, rgba(211,124,135,1) 56%, rgba(222,129,85,1) 65%);
+}
 
 /*Carousel Item information*/
 .item {

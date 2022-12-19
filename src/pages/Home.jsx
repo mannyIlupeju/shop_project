@@ -5,6 +5,8 @@ import { futureProofAudio } from '../products/Products'
 import { Link, NavLink } from 'react-router-dom'
 import Carousel from "react-elastic-carousel";
 import Button from '../components/Shared/Button'
+import { FaSpotify, FaApple, FaAudible } from "react-icons/fa";
+
 
 
 
@@ -21,7 +23,7 @@ const SectionTwo = ({items, setItems}) => {
 
   
   return (
-    <div className='container-fluid overflow-x-hidden h-min '>
+    <div className='mx-auto container overflow-x-hidden h-min '>
       <div className='p-10 2xl:mt-1 2xl:mx-6 lg:mt-10 md:mt-10'>
         <h2 className='text-left md:mt-9 text-7xl font-bold'>
           100 Selections to choose from
@@ -131,9 +133,35 @@ const SectionThree = () => {
 const SectionFour = () => {
 
   return (
-    <div className=''>
-      <div className='w-fit'>
-       <img src='/images/dealer-banner.png' alt="dealer-banner"/>
+    <div className='w-fit m-auto container mt-40'>
+      <div className='flex flex-row justify-center cta-banner rounded-md'>
+        <div className='flex flex-col relative top-28 ml-16 text-zinc-700'>
+          <h1 className='text-6xl font-extrabold'>Sounds for Everyone</h1>
+          <div className='mt-8 text-lg font-semibold '>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p>
+              High quality noise reduction sophisticated aesthetics nice
+              material
+            </p>
+          </div>
+          <div className='mt-20'>
+            <h2>Listen to our holiday special on</h2>
+          </div>
+          <div className='flex flex-row gap-x-5 mt-2'>
+            <div>
+              <FaSpotify size={30} />
+            </div>
+            <div>
+              <FaApple size={30} />
+            </div>
+            <div>
+              <FaAudible size={30} />
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src='/images/skullcandy5.webp' />
+        </div>
       </div>
     </div>
   );

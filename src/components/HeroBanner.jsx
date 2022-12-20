@@ -8,7 +8,7 @@ const HeroBanner = () => {
           {/**Setting up the hero banner headline */}
           <div className='relative left-40 md:left-28'>
             <div className='2xl:mt-40 md:mt-20'>
-              <h1 className='text-5xl font-extrabold text-teal-500 '>
+              <h1 className='text-5xl font-extrabold '>
                 Major III Bluetooth
               </h1>
               <p>A Modern Classic Re-engineered for $149</p>

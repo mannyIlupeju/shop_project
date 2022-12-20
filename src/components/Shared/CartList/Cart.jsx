@@ -22,7 +22,7 @@ function Cart({ saved, setSaved, value, setValue }) {
       <div className='h-screen'>
         {saved.length !== 0 ? (
           <>
-            <div className='text-center mt-40'>
+            <div className='text-center font-semibold mt-40'>
               <h1>Cart</h1>
             </div>
 
@@ -38,7 +38,7 @@ function Cart({ saved, setSaved, value, setValue }) {
                     <div className='grid grid-cols-3 gap-x-20'>
                       <div className='col-start-1'>
                         <div className='flex flex-row gap-x-5'>
-                          <div className='bg-white w-fit'>
+                          <div className=' w-fit'>
                             <img
                               src={thumbnail}
                               alt='product-image'
@@ -46,7 +46,7 @@ function Cart({ saved, setSaved, value, setValue }) {
                               id={id}
                             />
                           </div>
-                          <div className='w-20' id={id}>
+                          <div className='w-20 font-semibold' id={id}>
                             <h3>{productTitle}</h3>
                           </div>
                         </div>
@@ -55,32 +55,39 @@ function Cart({ saved, setSaved, value, setValue }) {
                       <div className='col-start-2'>
                         <div id={id}>
                           <div>
-                            <h3>Quantity:</h3>
+                            <h3 className="font-semibold">Quantity:</h3>
                             <div className='flex gap-x-2'>
-                              <div className='relative top-2 cursor-pointer' onClick={updateInCart} id={id}>
+                              <div
+                                className='relative top-2 cursor-pointer'
+                                onClick={updateInCart}
+                                id={id}
+                              >
                                 <FaPlus />
                               </div>
-                             
-                                <div className="bg-white w-fit">
-                                  <div className="p-2">
-                                    <h1>{quantity}</h1>
-                                  </div>
+
+                              <div className='bg-white w-fit'>
+                                <div className='p-2'>
+                                  <h1>{quantity}</h1>
                                 </div>
-                            
-                              <div className='relative top-2 cursor-pointer' onClick={reduceInCart}>
+                              </div>
+
+                              <div
+                                className='relative top-2 cursor-pointer'
+                                onClick={reduceInCart}
+                              >
                                 <FaMinus />
                               </div>
                             </div>
                           </div>
                           <div id={id}>
-                            <h3>Price: ${price}</h3>
+                            <h3 className="font-semibold">Price: ${price}</h3>
                           </div>
                         </div>
                       </div>
 
                       <div className='col-start-3' id={id}>
                         <div>
-                          <h3>${quantity * price}</h3>
+                          <h3 className="font-semibold">${quantity * price}</h3>
                         </div>
                       </div>
                     </div>

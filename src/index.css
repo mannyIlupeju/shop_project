@@ -31,8 +31,14 @@
 
 
 :root {
-  background-color: #D3D5D7;
+  --yellow: #FFC857;
+  --black: FFC857;
+  --green: #084C61;
+  --blue: #177E89;
+
+  background-color: var(--yellow);
   font-family: 'Red Hat Display', sans-serif;
+  color: var(--black);
 }
 
 
@@ -41,7 +47,7 @@
 
 /*navbar*/
 .nav-color {
-  background:#d3d5d7;
+  background:var(--blue);
 }
 /*hero banner*/
 
@@ -64,6 +70,7 @@
   background-color: black;
   background-attachment: fixed;
   min-width: 100%;
+
 }
 
 .secondImageProductPage {
@@ -146,7 +153,7 @@
 .nav-item::after {
   content: "";
   display: block;
-  background: #42f5a4;
+  background: var(--green);
   width: 20px;
   height: 3px;
   position: relative;
@@ -165,7 +172,7 @@
 .nav-item:nth-child(1):after {
   content: "";
   display: block;
-  background: #42f5a4;
+  background: var(--green);
   width: 20px;
   height: 3px;
   position: relative;
@@ -183,7 +190,7 @@
 .nav-item:nth-child(2):after {
   content: "";
   display: block;
-  background: #42f5a4;
+  background: var(--green);
   width: 10px;
   height: 3px;
   position: relative;
@@ -201,7 +208,7 @@
 .nav-item:nth-child(4):after {
   content: "";
   display: block;
-  background: #42f5a4;
+  background: var(--green);
   width: 10px;
   height: 3px;
   position: relative;
@@ -218,11 +225,11 @@
 
 /*Navigation Active State*/
 .active {
-  color: #42f5a4;
+  color: var(--blue);
 }
 
 .hoverItem:hover {
-  color: yellow;
+  color: var(--green);
 }
 
 
@@ -401,10 +408,11 @@
 
 .footer {
     place-items: center;
+    color: grey;
 }
 
 .footer-background {
-  background-color: black;
+  background-color: var(--black);
  -webkit-clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
 clip-path: polygon(0 0, 92% 0, 100% 100%, 0% 100%);
 border: 2px solid grey;

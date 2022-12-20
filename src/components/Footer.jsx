@@ -6,7 +6,7 @@ const Footer = () => {
 
   
   return (
-    <div className='container-width mx-auto w-screen h-fit bg-zinc-900'>
+    <div className='container-width mx-auto w-screen h-fit bg-slate-900 text-gray-400'>
       <div className='grid-cols-3 grid justify-items-center p-8'>
         <div className='grid-col-1'>
           <div>

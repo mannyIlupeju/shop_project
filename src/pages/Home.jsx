@@ -23,7 +23,7 @@ const SectionTwo = ({items, setItems}) => {
 
   
   return (
-    <div className='mx-auto container 2xl:overflow-x-hidden h-min mt-40 pl-20 text-zinc-800'>
+    <div className='mx-auto container 2xl:overflow-x-hidden h-min mt-40 pl-20 '>
       <div className=''>
         <h2 className='text-left text-6xl font-bold'>
           100 Selections to choose from
@@ -100,7 +100,7 @@ const SectionThree = () => {
 
  return (
    <div className='mx-auto h-fit container mt-40 px-20'>
-     <div className='headlineThree  text-zinc-700'>
+     <div className='headlineThree'>
        <div className='headLineText font-bold'>
          <h2 className='text-6xl'>Welcome to Future-Proof Audio</h2>
          <div className='headlineSubText text-lg '>

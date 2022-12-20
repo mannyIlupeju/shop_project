@@ -76,7 +76,7 @@ function App() {
 
   return (
     <Router>
-      <div className='flex flex-col h-full container-width '>
+      <div className='flex flex-col h-full container-width'>
         <Navbar
           search={search}
           setSearch={setSearchBar}

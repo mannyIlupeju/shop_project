@@ -50,7 +50,7 @@ function SkullCandyh1({
 
   return (
     <>
-      <div className='flex flex-row gap-x-20 h-full h1Banner relative z-0 overflow-x-hidden bg-black'>
+      <div className='flex flex-row gap-x-20 h-full h1Banner relative z-0 overflow-x-hidden'>
         <div className='leading-loose w-full text-white my-72 ml-20 flex flex-col gap-y-1'>
           <div className='mb-5'>
             <h1 className='text-5xl font-extrabold w-20'>{productTitle}</h1>

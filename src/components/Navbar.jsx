@@ -24,14 +24,14 @@ const Navbar = ({
       <div className='fixed top-0 left-0 z-50 nav-color text-zinc-800 w-screen p-8'>
         <nav className='navbar'>
           <div className='container mx-auto'>
-            <div className='flex-none px-2 mx-2'>
+            <div className='flex-none px-2 mx-2 relative bottom-1'>
               <Link to='/' className='text-lg'>
                 brand Logo
               </Link>
             </div>
 
-            <div className='flex-1 px-2 mx-2 relative z-50 text-sm'>
-              <div className='flex gap-x-10 text-center ml-5'>
+            <div className='flex-1 px-2 mx-2 relative z-50 text-sm bottom-1'>
+              <div className='flex gap-x-10 text-center font-semibold ml-5'>
                 <NavLink
                   onMouseOver={mouseOver}
                   to='/home'

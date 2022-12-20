@@ -23,20 +23,20 @@ const SectionTwo = ({items, setItems}) => {
 
   
   return (
-    <div className='mx-auto container 2xl:overflow-x-hidden h-min my-20 text-zinc-800'>
-      <div className='p-10 2xl:mt-1 2xl:mx-6 lg:mt-10 md:mt-10'>
-        <h2 className='text-left md:mt-9 text-7xl font-bold'>
+    <div className='mx-auto container 2xl:overflow-x-hidden h-min mt-40 pl-20 text-zinc-800'>
+      <div className=''>
+        <h2 className='text-left text-7xl font-bold'>
           100 Selections to choose from
         </h2>
       </div>
 
-      <div className=' p-auto flex flex-col gap-y-10 2xl:flex-row lg:flex-row'>
-        <div className='ml-16 text-left leading-loose '>
+      <div className='p-1 flex flex-col 2xl:flex-row lg:flex-row mt-5'>
+        <div className='text-left leading-loose'>
           <p className='w-80'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </p>
-          <div className='sectionTwoBtn mt-20'>
+          <div className='sectionTwoBtn mt-12'>
             <Button>Shop Now</Button>
           </div>
         </div>
@@ -48,20 +48,20 @@ const SectionTwo = ({items, setItems}) => {
                 return (
                   <div
                     key={index}
-                    className='p-2 justify-center rounded-lg  item'
+                    className=' justify-center rounded-lg  item'
                   >
                     <Link>
                       <img
                         src={items.image}
                         alt={items.alt}
-                        className='p-3 rounded-t-lg'
+                        className='p-4 rounded-t-lg'
                         loading='lazy'
                       />
                       <div className='text-amber-100 mx-3'>
                         <div className='flex flex-row justify-between'>
                           <div className='text-zinc-700'>{items.name}</div>
                           <div className='justify-end text-zinc-800'>
-                            {items.price}
+                            ${items.price}
                           </div>
                         </div>
                         <div className='text-zinc-700'>{items.tags}</div>
@@ -99,9 +99,9 @@ const SectionThree = () => {
   );
 
  return (
-   <div className='m-auto h-fit container'>
-     <div className='headlineThree m-24 2xl:mt-10 text-zinc-700'>
-       <div className='headLineText font-bold pr-8 pt-12 -ml-1'>
+   <div className='mx-auto h-fit container mt-40 p-20'>
+     <div className='headlineThree  text-zinc-700'>
+       <div className='headLineText font-bold'>
          <h2 className='text-7xl'>Welcome to Future-Proof Audio</h2>
          <div className='headlineSubText text-xl '>
            <p>
@@ -109,10 +109,10 @@ const SectionThree = () => {
              upgrades via the "brandlogo" App.
            </p>
          </div>
-         <div className='my-8 text-3xl'>The future is now</div>
+         <div className='text-3xl mt-10'>The future is now</div>
        </div>
 
-       <div className='grid grid-cols-1 2xl:grid-cols-2 lg:grid-cols-2 gap-10 mt-20'>
+       <div className='grid grid-cols-1 2xl:grid-cols-2 lg:grid-cols-2 gap-10 mt-10'>
          {futureProofAudio.map((items) => {
            const { item, index, images, id, className } = items;
            return (
@@ -135,7 +135,7 @@ const SectionThree = () => {
 const SectionFour = () => {
 
   return (
-    <div className='w-fit m-auto container my-40'>
+    <div className='w-fit m-auto container mt-40 mb-40'>
       <div className='flex flex-row justify-center cta-banner rounded-md'>
         <div className='flex flex-col relative top-20 ml-16 text-zinc-700'>
           <h1 className='text-6xl md:text-4xl font-extrabold'>Sounds for Everyone</h1>

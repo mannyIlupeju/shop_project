@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700;900&display=swap');
+
 
 /*Typography*/
 
@@ -19,6 +21,7 @@
 
 
 /*Fonts*/
+/* font : Red Hat Display */
 
 *{
   box-sizing: border-box;
@@ -29,6 +32,7 @@
 
 :root {
   background-color: #D3D5D7;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 
@@ -410,4 +414,17 @@ border: 2px solid grey;
 .dropdown-menu {
 clip-path: polygon(0 0, 100% 0%, 77% 100%, 0% 100%);
 background-color:#D3D5D7 ;
+}
+
+.footer-bar::after {
+  content: '';
+  background-color: white;
+  width: 10px;
+  height:1px;
+  position: relative;
+  bottom: 20px;
+  right: 100px;
+  transform: scaleX(100)
+
+
 }

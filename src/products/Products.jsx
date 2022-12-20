@@ -175,7 +175,7 @@ export const shopItemList = [
   {
     id: 0.6,
     name: "SkullCandy",
-    price: "$60",
+    price: 60,
     mainImage: "images/speaker1.webp",
     tags: "Headphones",
     alt: "models wearing parka jacket",

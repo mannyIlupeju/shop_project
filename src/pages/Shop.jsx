@@ -44,10 +44,12 @@ const Shop = ({shopList}) => {
                       <img src={items.altImage3} width={80} />
                     </div>
                     <div className='flex justify-center'>
-                      <h3 className='text-zinc-700'>{items.desc}</h3>
+                      <h3 className='text-zinc-700 font-bold'>{items.desc}</h3>
                     </div>
                     <div className='flex justify-center'>
-                      <span className='text-zinc-700'>{items.price}</span>
+                      <span className='text-zinc-700 font-bold'>
+                        ${items.price}
+                      </span>
                     </div>
                   </Link>
                 </div>

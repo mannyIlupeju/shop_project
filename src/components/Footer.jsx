@@ -6,8 +6,8 @@ const Footer = () => {
 
   
   return (
-    <div className='container-width mx-auto w-screen h-full bg-zinc-900'>
-      <div className='grid-cols-3 grid justify-items-center p-20'>
+    <div className='container-width mx-auto w-screen h-fit bg-zinc-900'>
+      <div className='grid-cols-3 grid justify-items-center p-8'>
         <div className='grid-col-1'>
           <div>
             <h1>Hear It First</h1>
@@ -37,6 +37,14 @@ const Footer = () => {
           <div>
             <h1>Follow Us</h1>
           </div>
+        </div>
+      </div>
+      <div className='flex flex-row justify-center items-center footer-bar'>
+        <div>
+          <p>Privacy Policy | Terms of Use</p>
+        </div>
+        <div>
+
         </div>
       </div>
     </div>

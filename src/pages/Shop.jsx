@@ -5,28 +5,28 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Shop = ({shopList}) => {
   return (
-    <div className=' h-full'>
+    <div className=' h-full container-width mx-auto w-screen sm:relative sm:left-10 text-gray-300'>
       <div className='mt-32'>
-        <div className='font-extrabold text-center text-4xl text-zinc-700 p-10'>
+        <div className='font-extrabold text-center text-4xl p-10'>
           <h2>SHOP ALL</h2>
         </div>
         <div className='grid grid-cols-2 gap-y-10 p-10 -mt-5 text-sm 2xl:grid-cols-4 w-max 2xl:gap-x-40 gap-x-10 xl:grid mx-auto justify-center'>
           <Link to='/earbuds'>
-          <button className='button-6 '>EARBUDS</button>
+            <button className='button-6 '>EARBUDS</button>
           </Link>
           <Link to='/headphones'>
-          <button className='button-6 '>HEADPHONES</button>
+            <button className='button-6 '>HEADPHONES</button>
           </Link>
           <Link to='/clothing'>
-          <button className='button-6 '>CLOTHING</button>
+            <button className='button-6 '>CLOTHING</button>
           </Link>
-          <Link to='/accessories'> 
-          <button className='button-6 '>ACCESSORIES</button>
+          <Link to='/accessories'>
+            <button className='button-6 '>ACCESSORIES</button>
           </Link>
         </div>
 
         <div>
-          <div className='grid grid-cols-1 justify-items-center 2xl:grid-cols-3 gap-y-2 lg:gap-x-1 md:grid-cols-2'>
+          <div className='grid grid-cols-1 justify-items-center 2xl:grid-cols-3 gap-y-2 lg:gap-x-1 md:grid-cols-2 text-gray-300'>
             {shopList.map((items, index) => {
               // console.log(items.link)
               return (
@@ -44,12 +44,10 @@ const Shop = ({shopList}) => {
                       <img src={items.altImage3} width={80} />
                     </div>
                     <div className='flex justify-center'>
-                      <h3 className='text-zinc-700 font-bold'>{items.desc}</h3>
+                      <h3 className=' font-bold'>{items.desc}</h3>
                     </div>
                     <div className='flex justify-center'>
-                      <span className='text-zinc-700 font-bold'>
-                        ${items.price}
-                      </span>
+                      <span className=' font-bold'>${items.price}</span>
                     </div>
                   </Link>
                 </div>

@@ -285,29 +285,28 @@ export const futureProofAudio = [
   {
     id: 1,
     images: "images/skullcandymodel1.jpeg",
-    className: "2xl:w-max lg:w-max h-min",
+    className: "imageBox box1",
     alt: "model wearing SkullCandy",
-  
   },
 
   {
     id: 2,
     images: "images/tracksuit.webp",
-    className: "2xl:w-max lg:w-max mt-20",
+    className: "imageBox box2",
     alt: "SkullCandy headphones",
   },
 
   {
     id: 3,
     images: "images/pexels-sound-on-3756770.jpeg",
-    className: " 2xl:w-max lg:w-max",
+    className: "imageBox box3",
     alt: "SkullCandy earphones",
   },
 
   {
     id: 4,
     images: "images/skullcandyheadphones.jpeg",
-    className: "2xl:w-max lg:w-max mt-20",
+    className: "imageBox box4",
     alt: "SkullCandy earphones",
   },
 ];

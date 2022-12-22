@@ -46,7 +46,7 @@ function Cart({ saved, setSaved, value, setValue }) {
                               id={id}
                             />
                           </div>
-                          <div className='w-20 font-semibold' id={id}>
+                          <div className='w-fit font-semibold' id={id}>
                             <h3>{productTitle}</h3>
                           </div>
                         </div>

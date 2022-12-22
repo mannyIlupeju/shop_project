@@ -21,16 +21,16 @@ const breakPoints = [
 
 const SectionTwo = ({items, setItems}) => {
 
-  
+   
   return (
-    <div className='mx-auto container 2xl:overflow-x-hidden h-min mt-40 pl-20 '>
+    <div className='mx-auto sm:px-20 lg:mx-auto container text-gray-300 overflow-x-hidden h-min mt-40 md:pl-1'>
       <div className=''>
         <h2 className='text-left text-6xl font-bold'>
           100 Selections to choose from
         </h2>
       </div>
 
-      <div className='p-1 flex flex-col 2xl:flex-row lg:flex-row mt-5'>
+      <div className='flex flex-col 2xl:flex-row lg:flex-row mt-5'>
         <div className='text-left leading-loose'>
           <p className='w-80'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -46,10 +46,7 @@ const SectionTwo = ({items, setItems}) => {
             <Carousel breakPoints={breakPoints}>
               {Products.map((items, index) => {
                 return (
-                  <div
-                    key={index}
-                    className=' justify-center rounded-lg  item'
-                  >
+                  <div key={index} className=' justify-center rounded-lg  item'>
                     <Link>
                       <img
                         src={items.image}
@@ -57,14 +54,12 @@ const SectionTwo = ({items, setItems}) => {
                         className='p-4 rounded-t-lg'
                         loading='lazy'
                       />
-                      <div className='text-amber-100 mx-3'>
+                      <div className='text-gray-300 mx-3'>
                         <div className='flex flex-row justify-between'>
-                          <div className='text-zinc-700'>{items.name}</div>
-                          <div className='justify-end text-zinc-800'>
-                            ${items.price}
-                          </div>
+                          <div className=''>{items.name}</div>
+                          <div className='justify-end '>${items.price}</div>
                         </div>
-                        <div className='text-zinc-700'>{items.tags}</div>
+                        <div className=''>{items.tags}</div>
                       </div>
                     </Link>
                   </div>
@@ -92,14 +87,14 @@ const SectionThree = () => {
 
   const button = (
     <Link to ='/shop'>
-    <button className='btn btn-success btn-md relative bottom-80 left-40 sm:btn-sm md:btn-md lg:btn-lg  2xl:bottom-80 2xl:left-60 md:bottom-80 md:left-60'>
+    <button className='btn btn-success btn-md relative bottom-80 left-40 sm:btn-sm md:btn-md lg:btn-lg  2xl:bottom-80 2xl:left-60 md:bottom-80 md:left-30'>
       Quick Shop
     </button>
     </Link>
   );
 
  return (
-   <div className='mx-auto h-fit container mt-40 px-20'>
+   <div className='flex justify-center container-width mt-40 text-gray-300'>
      <div className='headlineThree'>
        <div className='headLineText font-bold'>
          <h2 className='text-6xl'>Welcome to Future-Proof Audio</h2>
@@ -112,11 +107,11 @@ const SectionThree = () => {
          <div className='text-3xl mt-10'>The future is now</div>
        </div>
 
-       <div className='grid grid-cols-1 2xl:grid-cols-2 lg:grid-cols-2 gap-10 mt-10'>
+       <div className='grid grid-cols-1 2xl:grid-cols-2 lg:grid-cols-2 w-max mt-10 gap-12'>
          {futureProofAudio.map((items) => {
            const { item, index, images, id, className } = items;
            return (
-             <div key={id} className='cursor-pointer'>
+             <div key={id} className='cursor-pointer imageBox'>
                <img
                  src={images}
                  className={className}
@@ -135,10 +130,12 @@ const SectionThree = () => {
 const SectionFour = () => {
 
   return (
-    <div className='w-fit m-auto container mt-40 mb-40'>
-      <div className='flex flex-row justify-center cta-banner rounded-md'>
-        <div className='flex flex-col relative top-20 ml-16 text-zinc-700'>
-          <h1 className='text-6xl md:text-4xl font-extrabold'>Sounds for Everyone</h1>
+    <div className=' container-width flex justify-center mt-40 mb-40'>
+      <div className='flex flex-row justify-center items-center cta-banner rounded-md'>
+        <div className='flex flex-col relative  ml-16 text-gray-300'>
+          <h1 className='2xl:text-6xl text-4xl sm:mt-10 font-extrabold'>
+            Sounds for Everyone
+          </h1>
           <div className='mt-8 text-lg md:text-sm font-semibold '>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             <p>
@@ -146,22 +143,25 @@ const SectionFour = () => {
               material
             </p>
           </div>
-          <div className='mt-20 md:mt-6'>
-            <h2>Listen to our holiday special on</h2>
-          </div>
-          <div className='flex flex-row gap-x-5 mt-2'>
+          <div className='mt-20 sm:mt-8 sm:mb-10'>
             <div>
-              <FaSpotify size={30} />
+              <h2>Listen to our holiday special on</h2>
             </div>
-            <div>
-              <FaApple size={30} />
-            </div>
-            <div>
-              <FaAudible size={30} />
+
+            <div className='flex flex-row gap-x-5 mt-2'>
+              <div>
+                <FaSpotify size={30} />
+              </div>
+              <div>
+                <FaApple size={30} />
+              </div>
+              <div>
+                <FaAudible size={30} />
+              </div>
             </div>
           </div>
         </div>
-        <div>
+        <div className='sm:mt-10'>
           <img src='/images/skullcandy5.webp' />
         </div>
       </div>

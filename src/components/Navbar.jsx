@@ -21,7 +21,7 @@ const Navbar = ({
 
   return (
     <>
-      <div className='fixed top-0 left-0 z-50 nav-color text-zinc-800 w-screen p-8'>
+      <div className='fixed top-0 left-0 z-50 bg-slate-900 text-gray-300 w-full container-width p-8'>
         <nav className='navbar'>
           <div className='container mx-auto'>
             <div className='flex-none px-2 mx-2 relative bottom-1'>
@@ -111,7 +111,7 @@ const Navbar = ({
           </div>
         </nav>
 
-        <div className='fixed top-15 left-0 z-0 text-center p-2 font-light text-xs w-screen bg-black text-zinc-200'>
+        <div className='fixed top-15 left-0 z-0 text-center p-2 font-light text-xs w-full bg-black text-zinc-200'>
           <div className='border-red-800'>
             <p>Free Shipping from $100</p>
           </div>

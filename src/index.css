@@ -36,7 +36,7 @@
   --green: #084C61;
   --blue: #177E89;
 
-  background-color: var(--yellow);
+
   font-family: 'Red Hat Display', sans-serif;
   color: var(--black);
 }
@@ -107,7 +107,7 @@
 
 .cta-banner {
   background: rgb(248,247,250);
-  background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(173,16,159,1) 0%, rgba(211,124,135,1) 56%, rgba(222,129,85,1) 65%);
+background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(19,65,130,1) 0%, rgba(211,124,135,1) 84%, rgba(222,129,85,1) 100%);
 }
 
 /*Carousel Item information*/
@@ -230,6 +230,13 @@
 
 .hoverItem:hover {
   color: var(--green);
+}
+
+
+.imageBox {
+
+  object-fit: contain;
+  aspect-ratio: 3/2;
 }
 
 
@@ -363,8 +370,8 @@
 /*Section three photo collage details*/
 
 .box1 {
-  width: 600px;
-  height: 800px;
+  width: 30rem;
+  height: 45rem;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -372,24 +379,26 @@
 
 
 .box2 {
-  width: 600px;
-  height: 600px;
-  background-color: pink;
+  width: 30rem;
+  height: 30rem;
   cursor: pointer;
+  position: relative;
+  top:20px;
 }
 
 
 .box3 {
-  width: 600px;
-  height: 600px;
+  width: 30rem;
+  height: 41rem;
   cursor: pointer;
 }
 
 .box4 {
-  width: 600px;
-  height: 600px;
-  background-color: #b3d1bf;
+  width: 30rem;
+  height: 30rem;
   cursor: pointer;
+  position: relative;
+  top:35px;
 }
 
 .box-hover-zoom {

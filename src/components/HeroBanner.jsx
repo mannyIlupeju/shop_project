@@ -1,5 +1,5 @@
 import Button from "../components/Shared/Button";
-
+import {Link} from 'react-router-dom'
 const HeroBanner = () => {
   return (
     <div className='mx-auto bg-slate-800 text-gray-300 container-width h-fit w-full'>
@@ -23,7 +23,9 @@ const HeroBanner = () => {
               </p>
 
               <div className='mt-9 flex flex-row gap-x-8'>
-                <Button>Shop</Button>
+                <Link to='/shop'>
+                 <Button >Shop</Button>
+                </Link>
               </div>
             </div>
           </div>

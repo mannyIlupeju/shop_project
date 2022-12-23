@@ -135,14 +135,13 @@ function SkullCandygrey({addItemCart, saved, updateAmount, value, reduceAmount, 
                    };
                    let search = saved.find((y)=>y.id === newItems.id)
                    
-                   if(search === undefined) {
+                   if (search === undefined) {
                      addItemCart(newItems);
+                   } 
+                   else if (search) {
+                     setValue((prevCount)=>prevCount + 1);
                    }
-                   else {
-                    newItems.quantity += Number(newItems.quantity);
-                    console.log(newItems.quantity)
-                    
-                   }
+                   
 
                 }}
               >

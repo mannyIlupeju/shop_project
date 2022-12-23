@@ -5,6 +5,7 @@ import { BsFillBagPlusFill } from "react-icons/bs";
 function CartModal({ saved }) {
 console.log(saved)
 let itemQuantity = saved.map((x)=> x.quantity).reduce((x,y)=>x+y,0)
+console.log(itemQuantity)
 
   return (
     <div>

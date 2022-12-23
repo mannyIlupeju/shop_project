@@ -115,7 +115,7 @@ function SkullCandyh1({
             <button
               className='btn'
               onClick={() => {
-                const newItems = {
+                let newItem = {
                   id: id,
                   quantity: value,
                   thumbnail: thumbnail,
@@ -124,13 +124,16 @@ function SkullCandyh1({
                 };
 
                 //to confirm if item is already in cart
-                let search = saved.find((x) => x.id === newItems.id);
-                console.log(search);
+                let search = saved.find((x) => x.id === newItem.id);
+              
 
                 if (search === undefined) {
-                  addItemCart(newItems);
-                } else {
-                  console.log("already here");
+                  addItemCart(newItem);
+                  console.log('added')
+                } 
+                else if(search) {
+                  setValue((prevCount) => prevCount + 1);
+ 
                 }
               }}
             >

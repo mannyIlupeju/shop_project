@@ -32,7 +32,7 @@ function App() {
 
   //cart
   const [cart, setCart] = useState([]);
-   const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1);
 
   //get Item to permanently save the cart in cart
   const [saved, setSaved] = useState(() => {
@@ -42,7 +42,6 @@ function App() {
   });
 
   //Cart functions
-   
   //Increase amount functionality
   const updateAmount = (id) => {
     let selectedItem = id;
@@ -59,20 +58,29 @@ function App() {
     }
   };
 
+  //when user clicks add to cart, the items selected are stored in the cart state along with any previous item.
+  const addItem = (newItem) => {
+    setSaved([newItem, ...saved]);
+    console.log(saved);
+  };
+
+  
+
+  useEffect(() => {
+    localStorage.setItem("saved", JSON.stringify(saved));
+  }, [saved]);
+
+
+
+  //Modal function when it is clicked
   useEffect(() => {
     if (IsOpenModal) {
       document.body.style.overflowY = "hidden";
     }
   }, [IsOpenModal]);
 
-  //when user clicks add to cart, the items selected are stored in the cart state along with any previous item.
-  const addItem = (newItem) => {
-    setSaved([newItem, ...saved]);
-  };
 
-  useEffect(() => {
-    localStorage.setItem("saved", JSON.stringify(saved));
-  }, [saved]);
+
 
   return (
     <Router>
@@ -180,8 +188,7 @@ function App() {
           setOpenModal={setOpenModal}
         />
 
-        <Footer/>
-      
+        <Footer />
       </div>
     </Router>
   );

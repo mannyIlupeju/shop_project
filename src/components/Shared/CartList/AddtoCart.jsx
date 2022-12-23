@@ -5,6 +5,8 @@ function AddtoCart({}) {
  
   const [value, setValue] = useState(0);
 
+  console.log(value)
+
 
 
   //Increase amount functionality

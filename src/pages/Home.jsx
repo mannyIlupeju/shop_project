@@ -23,10 +23,11 @@ const SectionTwo = ({items, setItems}) => {
 
    
   return (
-    <div className='mx-auto sm:px-20 p-10 lg:mx-auto container text-gray-300 overflow-x-hidden h-min mt-40 md:pl-1'>
+    <div className='sm:px-20 px-10 lg:mx-auto container text-gray-300 h-min mt-40'>
       <div className=''>
         <h2 className='text-left text-3xl lg:text-4xl 2xl:text-6xl font-bold'>
-          100 Selections to choose from
+          <span className='textGradient bg-clip-text'>100 Selections </span>to
+          choose from
         </h2>
       </div>
 
@@ -37,7 +38,9 @@ const SectionTwo = ({items, setItems}) => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </p>
           <div className='sectionTwoBtn mt-12'>
-            <Button>Shop Now</Button>
+            <Link to='/shop'>
+              <Button>Shop Now</Button>
+            </Link>
           </div>
         </div>
 
@@ -87,7 +90,7 @@ const SectionThree = () => {
 
   const button = (
     <Link to ='/shop'>
-    <button className='btn btn-success btn-md relative bottom-80 left-40 sm:btn-sm md:btn-md lg:btn-lg  2xl:bottom-80 2xl:left-60 md:bottom-80 md:left-30'>
+    <button className='btn btn-success btn-md relative bottom-80 left-40 sm:btn-sm md:btn-md lg:btn-lg  2xl:bottom-80 2xl:left-50 md:bottom-80 md:left-30'>
       Quick Shop
     </button>
     </Link>
@@ -96,8 +99,10 @@ const SectionThree = () => {
  return (
    <div className='flex justify-center container-width mx-auto mt-40 text-gray-300'>
      <div className='headlineThree'>
-       <div className='headLineText font-bold p-10 2xl:p-0'>
-         <h2 className='text-3xl xl:text-6xl lg:text-6xl 2xl:text-6xl'>Welcome to Future-Proof Audio</h2>
+       <div className='headLineText font-bold p-32 2xl:p-0'>
+         <h2 className='text-3xl xl:text-6xl lg:text-6xl 2xl:text-6xl'>
+           Welcome to <span className='textGradient bg-clip-text'>Future-Proof</span> Audio
+         </h2>
          <div className='headlineSubText text-lg '>
            <p>
              Our new smart Feature Technology runs innovative features and adds
@@ -134,7 +139,7 @@ const SectionFour = () => {
       <div className='flex flex-row justify-center p-10 items-center cta-banner rounded-md'>
         <div className='flex flex-col relative  ml-16 text-gray-300'>
           <h1 className='2xl:text-6xl text-4xl sm:mt-10 font-extrabold'>
-            Sounds for Everyone
+            Sounds for <span className='textGradient bg-clip-text'>Everyone</span>
           </h1>
           <div className='mt-8 text-lg md:text-sm font-semibold '>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
@@ -172,14 +177,15 @@ const SectionFour = () => {
 const Home = () => {
 
   return (
-      <>
-        <HeroBanner/>
-       <SectionTwo/>
-       <SectionThree/>
-       <SectionFour/>
-      </>
-  
-  )
+    <>
+      
+        <HeroBanner />
+        <SectionTwo />
+        <SectionThree />
+        <SectionFour />
+      
+    </>
+  );
 }
 
 export default Home

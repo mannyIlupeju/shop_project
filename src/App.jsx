@@ -83,114 +83,122 @@ function App() {
 
 
   return (
-    <Router>
-      <div className='flex flex-col h-full  overflow-x-hidden container-width mx-auto'>
-        <Navbar
-          search={search}
-          setSearch={setSearchBar}
-          dropDown={dropDown}
-          setDropDown={setDropDown}
-          node={node}
-          setNode={setNode}
-          saved={saved}
-        />
+    <>
+    <div className='bg-slate-900'>
+      <Router>
+        <div className='flex flex-col h-full overflow-x-hidden container-width mx-auto'>
+          <Navbar
+            search={search}
+            setSearch={setSearchBar}
+            dropDown={dropDown}
+            setDropDown={setDropDown}
+            node={node}
+            setNode={setNode}
+            saved={saved}
+          />
 
-        <main>
-          <Routes>
-            <Route
-              path='/'
-              exact
-              element={<Home items={items} setItems={setItems} />}
-            />
-            <Route
-              path='/home'
-              exact
-              element={<Home items={items} setItems={setItems} />}
-            />
-            <Route
-              path='/newreleases'
-              exact
-              element={<Home items={items} setItems={setItems} />}
-            />
-            <Route
-              path='/shop'
-              exact
-              element={<Shop shopList={shopItemList} />}
-            />
-            <Route path='/about' exact element={<About />} />
-            <Route path='/contact' exact element={<Contact />} />
-            <Route path='/notfound' exact element={<Notfound />} />
-            <Route path='/login' exact element={<Login />} />
-            <Route path='/signup' exact element={<SignUp />} />
-            <Route
-              path='/skullcandyh1'
-              exact
-              element={
-                <SkullCandyh1
-                  cartOptions={ProductOptionList}
-                  saved={saved}
-                  addItemCart={addItem}
-                  updateAmount={updateAmount}
-                  reduceAmount={reduceAmount}
-                  value={value}
-                  setValue={setValue}
-                />
-              }
-            />
-            <Route
-              path='/skullcandygrey'
-              exact
-              element={
-                <SkullCandygrey
-                  addToCart={AddtoCart}
-                  addItemCart={addItem}
-                  saved={saved}
-                  updateAmount={updateAmount}
-                  reduceAmount={reduceAmount}
-                  value={value}
-                  setValue={setValue}
-                />
-              }
-            />
-            <Route path='/earbuds' exact element={<Earbuds />} />
-            <Route path='/headphones' exact element={<Headphones />} />
-            <Route
-              path='/skullcandyspeakers'
-              exact
-              element={<SkullCandySpeakers />}
-            />
-            <Route
-              path='/skullcandyearphones'
-              exact
-              element={<SkullCandyEarphones />}
-            />
-            <Route path='/skullcandyblue' exact element={<SkullCandyBlue />} />
-            <Route
-              path='/cart'
-              exact
-              element={
-                <Cart
-                  saved={saved}
-                  setSaved={setSaved}
-                  updateAmount={updateAmount}
-                  reduceAmount={reduceAmount}
-                />
-              }
-            />
-            <Route path='/cart' exact element={<CartModal saved={saved} />} />
-          </Routes>
-        </main>
+          <main>
+            <Routes>
+              <Route
+                path='/'
+                exact
+                element={<Home items={items} setItems={setItems} />}
+              />
+              <Route
+                path='/home'
+                exact
+                element={<Home items={items} setItems={setItems} />}
+              />
+              <Route
+                path='/newreleases'
+                exact
+                element={<Home items={items} setItems={setItems} />}
+              />
+              <Route
+                path='/shop'
+                exact
+                element={<Shop shopList={shopItemList} />}
+              />
+              <Route path='/about' exact element={<About />} />
+              <Route path='/contact' exact element={<Contact />} />
+              <Route path='/notfound' exact element={<Notfound />} />
+              <Route path='/login' exact element={<Login />} />
+              <Route path='/signup' exact element={<SignUp />} />
+              <Route
+                path='/skullcandyh1'
+                exact
+                element={
+                  <SkullCandyh1
+                    cartOptions={ProductOptionList}
+                    saved={saved}
+                    addItemCart={addItem}
+                    updateAmount={updateAmount}
+                    reduceAmount={reduceAmount}
+                    value={value}
+                    setValue={setValue}
+                  />
+                }
+              />
+              <Route
+                path='/skullcandygrey'
+                exact
+                element={
+                  <SkullCandygrey
+                    addToCart={AddtoCart}
+                    addItemCart={addItem}
+                    saved={saved}
+                    updateAmount={updateAmount}
+                    reduceAmount={reduceAmount}
+                    value={value}
+                    setValue={setValue}
+                  />
+                }
+              />
+              <Route path='/earbuds' exact element={<Earbuds />} />
+              <Route path='/headphones' exact element={<Headphones />} />
+              <Route
+                path='/skullcandyspeakers'
+                exact
+                element={<SkullCandySpeakers />}
+              />
+              <Route
+                path='/skullcandyearphones'
+                exact
+                element={<SkullCandyEarphones />}
+              />
+              <Route
+                path='/skullcandyblue'
+                exact
+                element={<SkullCandyBlue />}
+              />
+              <Route
+                path='/cart'
+                exact
+                element={
+                  <Cart
+                    saved={saved}
+                    setSaved={setSaved}
+                    updateAmount={updateAmount}
+                    reduceAmount={reduceAmount}
+                  />
+                }
+              />
+              <Route path='/cart' exact element={<CartModal saved={saved} />} />
+            </Routes>
+          </main>
 
-        <OpenModal
-          modal={IsButtonModal}
-          setButtonModal={setButtonModal}
-          openModal={IsOpenModal}
-          setOpenModal={setOpenModal}
-        />
+          <Footer/>
+        </div>
+      </Router>
 
-        <Footer />
-      </div>
-    </Router>
+      <OpenModal
+        modal={IsButtonModal}
+        setButtonModal={setButtonModal}
+        openModal={IsOpenModal}
+        setOpenModal={setOpenModal}
+      />
+    </div>
+    </>
   );
 }
 

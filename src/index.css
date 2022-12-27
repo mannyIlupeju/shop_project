@@ -61,7 +61,16 @@
 /*other pages*/
 
 
+/*gradient text*/
+.textGradient {
+  background: rgb(62,103,213);
+  background: linear-gradient(167deg, rgba(62,103,213,1) 6%, rgba(65,53,154,1) 42%, rgba(194,5,170,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+
+/*hero Banner*/
 .herobanner {
   background-image: url('./heroImage/Untitled\ design\ \(5\).png');
   background-repeat: no-repeat;
@@ -73,14 +82,10 @@
 
 }
 
-.secondImageProductPage {
-  background-image: url('/public/images/secondproductpagebg.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;;
-  background-attachment: fixed;
-  min-width: 100%;
-}
+
+
+
+/*Shop Banners*/
 
 .h1Banner {
   background-image: url('/public/images/skullcandy1.jpeg');
@@ -88,6 +93,15 @@
    background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-y: 4rem;
+}
+
+.secondImageProductPage {
+  background-image: url('/public/images/secondproductpagebg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;;
+  background-attachment: fixed;
+  min-width: 100%;
 }
 
 .greyBanner {
@@ -105,9 +119,11 @@
   background-position-y: 4rem;
 }
 
+/*Cta Banner*/
+
 .cta-banner {
   background: rgb(248,247,250);
-background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(19,65,130,1) 0%, rgba(211,124,135,1) 84%, rgba(222,129,85,1) 100%);
+background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(19,65,130,1) 0%, rgb(226, 96, 113) 84%, rgba(222,129,85,1) 100%);
 }
 
 /*Carousel Item information*/

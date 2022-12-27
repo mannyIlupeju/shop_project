@@ -6,15 +6,15 @@ const HeroBanner = () => {
       <div className='p-16 '>
         <div className='text-neutral-content justify-center flex flex-col 2xl:flex-row xl:flex-row lg:flex-row leading-loose mx-15 w-screen'>
           {/**Setting up the hero banner headline */}
-          <div className=' md:relative md:left-12'>
+          <div className=' md:relative md:left-12 relative -left-10'>
             <div className='mt-40 md:leading-10'>
-              <h1 className='text-5xl font-extrabold md:text-7xl '>
-                Major III Bluetooth
+              <h1 className='text-5xl font-extrabold md:text-7xl'>
+                Major III <span className="textGradient bg-clip-text">Bluetooth</span>
               </h1>
               <p>A Modern Classic Re-engineered for $149</p>
             </div>
 
-            <div className='py-6 max-w-md md:text-lg md:max-w-lg'>
+            <div className='py-6 max-w-xs md:text-lg md:max-w-lg'>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -24,14 +24,14 @@ const HeroBanner = () => {
 
               <div className='mt-9 flex flex-row gap-x-8'>
                 <Link to='/shop'>
-                 <Button >Shop</Button>
+                  <Button>Shop</Button>
                 </Link>
               </div>
             </div>
           </div>
 
           <div className='flex'>
-            <div className='relative top-16 left-10 w-fit sm:top-14 md:top-16 md:right-20 lg:left-1 lg:top-52 xl:top-32 2xl:top-14'>
+            <div className='relative top-16 left-2 w-fit sm:top-14 md:top-16 md:right-20 lg:left-1 lg:top-52 xl:top-32 2xl:top-16'>
               <img
                 src='/images/newherobanner.png'
                 alt='girl listening to music'

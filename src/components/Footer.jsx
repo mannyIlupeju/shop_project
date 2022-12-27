@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <div className='container-width h-fit bg-slate-900 text-gray-400 '>
-      <div className='grid-cols-3 grid justify-items-center p-8 '>
+      <div className='2xl:grid-cols-3 grid-cols-1 grid justify-items-center p-8 '>
         <div className='grid-col-1'>
           <div>
             <h1>Hear It First</h1>

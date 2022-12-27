@@ -26,11 +26,11 @@ const Shop = ({shopList}) => {
         </div>
 
         <div>
-          <div className='grid grid-cols-1 justify-items-center 2xl:grid-cols-3 gap-y-2 lg:gap-x-1 md:grid-cols-2 text-gray-300'>
+          <div className='container mx-auto grid grid-cols-1 justify-center 2xl:grid-cols-3 gap-y-2 lg:gap-x-1 md:grid-cols-2 text-gray-300'>
             {shopList.map((items, index) => {
               // console.log(items.link)
               return (
-                <div key={index} className='flex my-10'>
+                <div key={index} className='flex justify-center my-10'>
                   <Link to={items.link}>
                     <img
                       src={items.mainImage}

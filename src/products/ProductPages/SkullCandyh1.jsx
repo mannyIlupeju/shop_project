@@ -160,7 +160,7 @@ function SkullCandyh1({
       <div className='h-screen secondImageProductPage bg-black text-white leading-loose'>
         <div className='ml-20 pt-60'>
           <h1 className='text-4xl font-extrabold mb-4'>All love, all year</h1>
-          <p className='w-1/3'>
+          <p className='2xl:w-1/3 xl:w-1/3 lg:w-1/3 md:w-1/3 w-fit'>
             The LGBTQIA+ community faces higher-than-average rates of
             depression, PTSD and anxiety disorder. We are teaming up with our
             friends at To Write Love on Her Arms to help raise awareness and

@@ -23,9 +23,9 @@ const SectionTwo = ({items, setItems}) => {
 
    
   return (
-    <div className='mx-auto sm:px-20 lg:mx-auto container text-gray-300 overflow-x-hidden h-min mt-40 md:pl-1'>
+    <div className='mx-auto sm:px-20 p-10 lg:mx-auto container text-gray-300 overflow-x-hidden h-min mt-40 md:pl-1'>
       <div className=''>
-        <h2 className='text-left text-6xl font-bold'>
+        <h2 className='text-left text-3xl lg:text-4xl 2xl:text-6xl font-bold'>
           100 Selections to choose from
         </h2>
       </div>
@@ -94,10 +94,10 @@ const SectionThree = () => {
   );
 
  return (
-   <div className='flex justify-center container-width mt-40 text-gray-300'>
+   <div className='flex justify-center container-width mx-auto mt-40 text-gray-300'>
      <div className='headlineThree'>
-       <div className='headLineText font-bold'>
-         <h2 className='text-6xl'>Welcome to Future-Proof Audio</h2>
+       <div className='headLineText font-bold p-10 2xl:p-0'>
+         <h2 className='text-3xl xl:text-6xl lg:text-6xl 2xl:text-6xl'>Welcome to Future-Proof Audio</h2>
          <div className='headlineSubText text-lg '>
            <p>
              Our new smart Feature Technology runs innovative features and adds
@@ -107,7 +107,7 @@ const SectionThree = () => {
          <div className='text-3xl mt-10'>The future is now</div>
        </div>
 
-       <div className='grid grid-cols-1 2xl:grid-cols-2 lg:grid-cols-2 w-max mt-10 gap-12'>
+       <div className='container mx-auto px-5 grid grid-cols-1 2xl:grid-cols-2 lg:grid-cols-2 w-max mt-10 gap-12'>
          {futureProofAudio.map((items) => {
            const { item, index, images, id, className } = items;
            return (
@@ -130,8 +130,8 @@ const SectionThree = () => {
 const SectionFour = () => {
 
   return (
-    <div className=' container-width flex justify-center mt-40 mb-40'>
-      <div className='flex flex-row justify-center items-center cta-banner rounded-md'>
+    <div className=' container-width flex mx-auto justify-center p-10 2xl:p-0 mt-40 mb-40'>
+      <div className='flex flex-row justify-center p-10 items-center cta-banner rounded-md'>
         <div className='flex flex-col relative  ml-16 text-gray-300'>
           <h1 className='2xl:text-6xl text-4xl sm:mt-10 font-extrabold'>
             Sounds for Everyone

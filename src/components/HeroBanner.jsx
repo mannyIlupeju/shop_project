@@ -31,7 +31,7 @@ const HeroBanner = () => {
           </div>
 
           <div className='flex'>
-            <div className='relative top-16 left-10 w-fit sm:top-14 md:top-16 md:right-20 lg:left-1  lg:top-32 xl:top-32 2xl:top-14'>
+            <div className='relative top-16 left-10 w-fit sm:top-14 md:top-16 md:right-20 lg:left-1 lg:top-52 xl:top-32 2xl:top-14'>
               <img
                 src='/images/newherobanner.png'
                 alt='girl listening to music'

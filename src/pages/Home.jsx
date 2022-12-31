@@ -8,6 +8,7 @@ import Button from "../components/Shared/Button";
 import { FaSpotify, FaApple, FaAudible } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+
 const imageVariants = {
   initial: {
     scale: 0,

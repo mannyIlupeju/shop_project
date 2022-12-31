@@ -1,22 +1,39 @@
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
-import { useState } from "react";
-const Footer = () => {
-  const [email, setEmail] = useState('')
+import emailjs from "@emailjs/browser";
+import { useState, useEffect,useRef } from "react";
+const Footer = ({message, setMessage}) => {
+  const [email, setEmail] = useState("");
 
+  const form = useRef();
+
+
+  
+  //email submission function
   const subscribeFn = (e) => {
     e.preventDefault();
-    if(email.length === '' || email.length === undefined) {
-      alert('please enter correct email')
-    }
-  }
-
-
+    emailjs
+      .sendForm(
+        "service_38rwxo3",
+        "template_bxqifjn",
+        form.current,
+        "NZMy4bqwAbYcWuKMX"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          if (result.text) {
+            setMessage(result.text);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   const readEmail = (e) => {
-    setEmail(e.target.value)
-  }
-
-
+    setEmail(e.target.value);
+  };
 
   return (
     <div className='container-width h-fit bg-slate-900 text-gray-400'>
@@ -27,10 +44,7 @@ const Footer = () => {
               <h1>Hear It First</h1>
             </div>
             <div>
-              <form
-                action='https://formsubmit.co/00eae2eb6f9eb546a17a5437018042a1'
-                method='POST'
-              >
+              <form ref={form} onSubmit={subscribeFn}>
                 <input
                   type='email'
                   name='email'
@@ -41,7 +55,12 @@ const Footer = () => {
                   onChange={readEmail}
                 />
                 <div className='text-center my-2'>
-                  <button variant='contained' type='submit' className='btn'>
+                  <button
+                    variant='contained'
+                    type='submit'
+                    value='Send'
+                    className='btn'
+                  >
                     Subscribe
                   </button>
                 </div>

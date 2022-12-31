@@ -8,7 +8,7 @@ import { shopItemList, futureProofAudio } from './products/Products';
 import {Home, About, Contact, Notfound, Shop, Login, SignUp} from './pages';
 import {SkullCandyh1, SkullCandygrey, SkullCandyEarphones, SkullCandyBlue, SmartWatch, SkullCandySpeakers, Earbuds, Headphones} from './products/ProductPages';
 import ProductOptionList from './components/Shared/CartList/ProductOptionList';
-
+import Subscription from './components/Shared/Subscription';
 import CartModal from './components/Shared/CartList/CartModal';
 import Cart from './components/Shared/CartList/Cart';
 
@@ -40,6 +40,9 @@ function App() {
     const initialItem = JSON.parse(savedItem);
     return initialItem || [];
   });
+
+  //subscription modal state
+    const [message, setMessage] = useState();
 
   //Cart functions
   //Increase amount functionality
@@ -80,6 +83,7 @@ function App() {
   }, [IsOpenModal]);
 
 
+  
 
 
   return (
@@ -190,7 +194,9 @@ function App() {
               </Routes>
             </main>
 
-            <Footer/>
+            <Subscription message={message} setMessage={setMessage}/>
+
+            <Footer message={message} setMessage={setMessage}/>
           </div>
         </Router>
 
@@ -200,10 +206,7 @@ function App() {
           openModal={IsOpenModal}
           setOpenModal={setOpenModal}
         />
-
-       
       </div>
-     
     </>
   );
 }

@@ -23,6 +23,38 @@
 /*Fonts*/
 /* font : Red Hat Display */
 
+
+/*Media Queries*/
+/*Responsive Menu*/
+.rMenu {
+  display: none;
+}
+
+@media only screen and (max-width: 766px) {
+  .rMenu {
+    display: block;
+  }
+  .fullMenu {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*******************/
+
+
+
+
+
 *{
   box-sizing: border-box;
   padding:0;
@@ -202,6 +234,8 @@ background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(19,65,130,1) 0%
   transform: scaleX(5)
 }
 
+
+
 /*Shop*/
 .nav-item:nth-child(2):after {
   content: "";
@@ -250,9 +284,14 @@ background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(19,65,130,1) 0%
 
 
 .imageBox {
-
   object-fit: contain;
   aspect-ratio: 3/2;
+}
+
+.imagesBox {
+  object-fit: contain;
+  aspect-ratio: auto;
+  width: 100%;
 }
 
 
@@ -458,6 +497,11 @@ background-color:#D3D5D7 ;
   bottom: 20px;
   right: 100px;
   transform: scaleX(100)
+}
 
-
+input[type=email] {
+  padding: 2px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
 }

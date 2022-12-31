@@ -18,6 +18,7 @@ function SkullCandyh1({
   const [itemList, setItemList] = useState(false);
   const [noDrop, setDrop] = useState(true);
  
+  console.log(saved)
 
   //array function to retrieve the item from the list of arrays
   let skullCandy = shopItemList.find((item) => item.name === "SkullCandy1");
@@ -50,122 +51,121 @@ function SkullCandyh1({
 
   return (
     <>
-      <div className='flex flex-row gap-x-20 h-full h1Banner relative z-0 overflow-x-hidden'>
-        <div className='leading-loose w-full text-white my-72 ml-20 flex flex-col gap-y-1'>
-          <div className='mb-5'>
-            <h1 className='text-5xl font-extrabold w-20'>{productTitle}</h1>
-          </div>
-          <div>
-            <h2 className='text-xl font-bold w-60'>{productDesc}</h2>
-          </div>
-          <p className='text-lg font-extrabold'>{price}</p>
-
-          <ProductOptionList>
-            <div className='justify-center'>
-              <img src={thumbnail} width={40} />
+      <div>
+        <div className='flex flex-row gap-x-20  h1Banner relative z-0'>
+          <div className='leading-loose w-full text-white my-72 ml-20 flex flex-col gap-y-1'>
+            <div className='mb-5'>
+              <h1 className='text-5xl font-extrabold w-20'>{productTitle}</h1>
             </div>
-            <div className='my-2 gap-x-5'>
-              <h3 className='text-black text-sm'>{productTitle}</h3>
-            </div>
-
-            <div
-              className='my-2 cursor-pointer relative left-32'
-              onClick={toggleDrop}
-            >
-              {noDrop ? (
-                <div>
-                  <FaMinus size={25} color={"black"} />
-                </div>
-              ) : null}
-
-              {!noDrop ? (
-                <div>
-                  <FaPlus size={25} color={"black"} />
-                </div>
-              ) : null}
-            </div>
-          </ProductOptionList>
-
-          {itemList ? products : null}
-
-          {/* Add to Cart Functionality */}
-          <div className='flex flex-row gap-x-2 my-3'>
             <div>
-              <button className='button-6' onClick={updateAmount}>
-                <FaPlus />
+              <h2 className='text-xl font-bold w-60'>{productDesc}</h2>
+            </div>
+            <p className='text-lg font-extrabold'>{price}</p>
+
+            <ProductOptionList>
+              <div className='justify-center'>
+                <img src={thumbnail} width={40} />
+              </div>
+              <div className='my-2 gap-x-5'>
+                <h3 className='text-black text-sm'>{productTitle}</h3>
+              </div>
+
+              <div
+                className='my-2 cursor-pointer relative left-32'
+                onClick={toggleDrop}
+              >
+                {noDrop ? (
+                  <div>
+                    <FaMinus size={25} color={"black"} />
+                  </div>
+                ) : null}
+
+                {!noDrop ? (
+                  <div>
+                    <FaPlus size={25} color={"black"} />
+                  </div>
+                ) : null}
+              </div>
+            </ProductOptionList>
+
+            {itemList ? products : null}
+
+            {/* Add to Cart Functionality */}
+            <div className='flex flex-row gap-x-2 my-3'>
+              <div>
+                <button className='button-6' onClick={updateAmount}>
+                  <FaPlus />
+                </button>
+              </div>
+
+              <div>
+                <input
+                  id='quantity'
+                  className='input input-info input-md w-20 h-60 max-w-xs'
+                  value={value}
+                  onChange={updateAmount}
+                />
+              </div>
+
+              <div>
+                <button className='button-6' onClick={reduceAmount}>
+                  <FaMinus />
+                </button>
+              </div>
+            </div>
+            <div>
+              <button
+                className='btn'
+                onClick={() => {
+                  const newItems = {
+                    id: id,
+                    quantity: value,
+                    thumbnail: thumbnail,
+                    price: price,
+                    productTitle: productTitle,
+                  };
+                  let search = saved.find((y) => y.id === newItems.id);
+
+                  if (search === undefined) {
+                    addItemCart(newItems);
+                  } else if (search) {
+                    let newQuantity = newItems.quantity++;
+                    saved.find((x) => (x.quantity = newQuantity));
+                    newItems.quantity = newQuantity;
+                  }
+                }}
+              >
+                ADD TO CART
               </button>
             </div>
 
             <div>
+              <p>
+                Enter your email address to be notified when this item is in
+                stock
+              </p>
               <input
-                id='quantity'
-                className='input input-info input-md w-20 h-60 max-w-xs'
-                value={value}
-                onChange={updateAmount}
+                type='email'
+                className='input input-info input-md w-full max-w-xs'
+                placeholder='Enter email'
               />
-            </div>
-
-            <div>
-              <button className='button-6' onClick={reduceAmount}>
-                <FaMinus />
-              </button>
-            </div>
-          </div>
-          <div>
-            <button
-              className='btn'
-              onClick={() => {
-                let newItem = {
-                  id: id,
-                  quantity: value,
-                  thumbnail: thumbnail,
-                  price: price,
-                  productTitle: productTitle,
-                };
-
-                //to confirm if item is already in cart
-                let search = saved.find((x) => x.id === newItem.id);
-              
-
-                if (search === undefined) {
-                  addItemCart(newItem);
-                  console.log('added')
-                } 
-                else if(search) {
-                  setValue((prevCount) => prevCount + 1);
- 
-                }
-              }}
-            >
-              ADD TO CART
-            </button>
-          </div>
-
-          <div>
-            <p>
-              Enter your email address to be notified when this item is in stock
-            </p>
-            <input
-              type='email'
-              className='input input-info input-md w-full max-w-xs'
-              placeholder='Enter email'
-            />
-            <div className='mt-5'>
-              <button className='button-6'>Notify Me</button>
+              <div className='mt-5'>
+                <button className='button-6'>Notify Me</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className='h-screen secondImageProductPage bg-black text-white leading-loose'>
-        <div className='ml-20 pt-60'>
-          <h1 className='text-4xl font-extrabold mb-4'>All love, all year</h1>
-          <p className='2xl:w-1/3 xl:w-1/3 lg:w-1/3 md:w-1/3 w-fit'>
-            The LGBTQIA+ community faces higher-than-average rates of
-            depression, PTSD and anxiety disorder. We are teaming up with our
-            friends at To Write Love on Her Arms to help raise awareness and
-            spread some love - not just for Pride Month, but all year long.
-          </p>
+        <div className='h-screen secondImageProductPage bg-black text-white leading-loose'>
+          <div className='ml-20 pt-60'>
+            <h1 className='text-4xl font-extrabold mb-4'>All love, all year</h1>
+            <p className='2xl:w-1/3 xl:w-1/3 lg:w-1/3 md:w-1/3 w-fit'>
+              The LGBTQIA+ community faces higher-than-average rates of
+              depression, PTSD and anxiety disorder. We are teaming up with our
+              friends at To Write Love on Her Arms to help raise awareness and
+              spread some love - not just for Pride Month, but all year long.
+            </p>
+          </div>
         </div>
       </div>
     </>

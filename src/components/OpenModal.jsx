@@ -16,9 +16,12 @@ function OpenModal({modal, openModal, setButtonModal, setOpenModal}) {
   return (
     <>
       {modal ? (
-        <div className='ml-5 sticky bottom-20 z-50'>
-          <div className='btn' onClick={toggleModal}>
+        <div className='ml-5'>
+          <div className='btn fixed bottom-2 z-50' onClick={toggleModal}>
             <h3>GET 20% OFF NOW</h3>
+            <div className='relative -top-3 left-2'>
+              <FaTimes size={13} />
+            </div>
           </div>
         </div>
       ) : null}

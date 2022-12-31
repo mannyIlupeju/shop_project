@@ -5,9 +5,10 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 
 
 function Cart({ saved, setSaved, value, setValue }) {
-  
+
+
   const updateInCart = (quantity) => {
-   
+    return quantity+1
   }
   
   const reduceInCart = () => {
@@ -61,14 +62,17 @@ function Cart({ saved, setSaved, value, setValue }) {
                         <div className='flex gap-x-2'>
                           <div
                             className='relative top-2 cursor-pointer'
-                            onClick={updateInCart}
+                            onClick={()=>{
+                              let amount = quantity
+                              
+                            }}
                             id={id}
                           >
                             <FaPlus />
                           </div>
 
                           <div className='bg-white w-5 h-8 mx-3 '>
-                            <div className='flex justify-center'>
+                            <div className='flex justify-center' value={quantity}>
                               <h1>{quantity}</h1>
                             </div>
                           </div>

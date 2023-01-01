@@ -279,7 +279,7 @@ background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(19,65,130,1) 0%
 }
 
 .hoverItem:hover {
-  color: var(--green);
+  color: #2e835d;
 }
 
 
@@ -504,4 +504,21 @@ input[type=email] {
   box-sizing: border-box;
   border-radius: 20px;
   background-color: white;
+}
+
+/*About Page*/
+.aboutBanner2 {
+  background-image: url('/public/images/playing\ video\ game\ image.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.aboutBanner3 {
+  background-image: url('/public/images/ATH_G1_emotional_01-scaled.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }

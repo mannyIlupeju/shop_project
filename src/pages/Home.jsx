@@ -42,8 +42,7 @@ const heroImageVariants = {
     opacity: 1,
     transition: {
       ease: 'easeIn',
-      delay: '0.2',
-      duration: 2
+      duration: 1
     }
   }
 }

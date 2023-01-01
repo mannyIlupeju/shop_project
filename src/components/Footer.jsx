@@ -1,6 +1,10 @@
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { useState, useEffect,useRef } from "react";
+import {motion} from 'framer-motion'
+
+
+
 const Footer = ({message, setMessage}) => {
   const [email, setEmail] = useState("");
 
@@ -35,9 +39,31 @@ const Footer = ({message, setMessage}) => {
     setEmail(e.target.value);
   };
 
+  //Footer Animation
+  const footerVariants = {
+    hidden: {
+      opacity: 0,
+      y: "60",
+    },
+    visible: {
+      y: 0,
+      opacity:1,
+      transition: {
+        duration: 1,
+        ease: 'easeIn',
+      }
+    }
+  }
+
+
   return (
     <div className='container-width h-fit bg-slate-900 text-gray-400'>
-      <div className='grid-cols-3 gap-x-20 grid justify-items-center p-8 '>
+      <motion.div className='grid-cols-3 gap-x-20 grid justify-items-center p-8'
+      variants={footerVariants}
+      initial={'hidden'}
+      whileInView={'visible'}
+      viewport={{once: false}}
+      >
         <div className='grid-col-1 footer-bar'>
           <div className=''>
             <div className='text-center mb-2'>
@@ -100,7 +126,7 @@ const Footer = ({message, setMessage}) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* <div className='flex flex-row justify-center w-screen items-center footer-bar'>
         <div>

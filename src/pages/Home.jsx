@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HeroBanner from "../components/HeroBanner";
 import Products from "../products/Products";
 import { futureProofAudio } from "../products/Products";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import Button from "../components/Shared/Button";
 import { FaSpotify, FaApple, FaAudible } from "react-icons/fa";
@@ -172,7 +172,7 @@ const SectionThree = () => {
         >
           <h2 className='text-3xl xl:text-6xl lg:text-6xl 2xl:text-6xl'>
             Welcome to{" "}
-            <span className='textGradient bg-clip-text'>Future-Proof</span>{" "}
+            <span className='textGradient bg-clip-text'>Future-Proof</span> 
             Audio
           </h2>
           <div className='headlineSubText mt-5 text-lg '>

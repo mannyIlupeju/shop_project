@@ -1,8 +1,6 @@
 export {default as SkullCandyh1} from './SkullCandyh1'
 export {default as SkullCandygrey} from './SkullCandygrey'
-export {default as SmartWatch} from './SmartWatch'
-export {default as SkullCandyEarphones} from './SkullCandyEarphones.jsx'
-export {default as SkullCandySpeakers} from './SkullCandySpeakers.jsx'
-export {default as SkullCandyBlue} from './SkullCandyBlue.jsx'
-export {default as Earbuds} from './Earbuds.jsx'
-export {default as Headphones} from './Headphones.jsx'
+
+
+
+

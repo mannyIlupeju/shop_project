@@ -499,12 +499,7 @@ background-color:#D3D5D7 ;
   transform: scaleX(100)
 }
 
-input[type=email] {
-  padding: 2px 20px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  background-color: white;
-}
+
 
 /*About Page*/
 .aboutBanner2 {
@@ -521,4 +516,39 @@ input[type=email] {
   background-repeat: no-repeat;
   background-position: center;
 
+}
+
+/**Input Styles**/
+
+input[type=email] {
+  padding: 2px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
+}
+
+
+input[type=text] {
+  padding: 2px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
+}
+
+input[type=tel] {
+  padding: 2px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
+}
+
+input[type=textarea] {
+  padding: 2px 20px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background-color: white;
+}
+
+input:focus {
+  background-color: #2e835d;
 }

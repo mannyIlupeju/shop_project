@@ -5,40 +5,8 @@ import {motion} from 'framer-motion'
 
 
 
-const Footer = ({message, setMessage}) => {
-  const [email, setEmail] = useState("");
-
-  const form = useRef();
-
-
+const Footer = ({message, setMessage, subscribeFn, email, setEmail, readEmail, form}) => {
   
-  //email submission function
-  const subscribeFn = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_38rwxo3",
-        "template_bxqifjn",
-        form.current,
-        "NZMy4bqwAbYcWuKMX"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          if (result.text) {
-            setMessage(result.text);
-          }
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
-  const readEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
   //Footer Animation
   const footerVariants = {
     hidden: {
@@ -66,7 +34,7 @@ const Footer = ({message, setMessage}) => {
       >
         <div className='grid-col-1 footer-bar'>
           <div className=''>
-            <div className='text-center mb-2'>
+            <div className=' mb-2'>
               <h1>Hear It First</h1>
             </div>
             <div>
@@ -76,11 +44,11 @@ const Footer = ({message, setMessage}) => {
                   name='email'
                   className='email'
                   placeholder='Enter email to subscribe'
-                  size={33}
+                  size={20}
                   value={email}
                   onChange={readEmail}
                 />
-                <div className='text-center my-2'>
+                <div className='my-2'>
                   <button
                     variant='contained'
                     type='submit'
@@ -95,7 +63,7 @@ const Footer = ({message, setMessage}) => {
           </div>
         </div>
         <div className='grid-col-2'>
-          <div className='grid gap-x-10 grid-cols-3'>
+          <div className='grid grid-cols-3'>
             <div className='grid gap-y-4 col-start-1'>
               <p>Help Center</p>
               <p>Contact Us</p>
@@ -103,8 +71,8 @@ const Footer = ({message, setMessage}) => {
               <p>Warranty</p>
             </div>
             <div className='grid col-start-3'>
-              <span>About</span>
-              <span>Careers</span>
+              <p>About</p>
+              <p>Careers</p>
             </div>
           </div>
         </div>

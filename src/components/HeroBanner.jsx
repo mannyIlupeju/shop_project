@@ -42,7 +42,7 @@ const HeroBanner = () => {
       <div className='p-16 '>
         <div className='text-neutral-content justify-center flex flex-col 2xl:flex-row xl:flex-row lg:flex-row leading-loose mx-15 w-screen'>
           {/**Setting up the hero banner headline */}
-          <motion.div className=' md:relative md:left-12 relative -left-10'
+          <motion.div className=' md:relative md:left-6 relative -left-10'
           variants={heroTextVariants}
           initial="hidden"
           animate={"visible"}>
@@ -73,7 +73,7 @@ const HeroBanner = () => {
           variants={heroImageVariants}
           initial="hidden"
           whileInView={"visible"}>
-            <div className='relative top-16 left-2 w-fit sm:top-14 md:top-16 md:right-20 lg:left-1 lg:top-52 xl:top-32 2xl:top-16'>
+            <div className='relative top-16 left-2 w-fit sm:top-14 md:top-16 md:right-20 lg:-left-4 lg:top-32 xl:top-32 2xl:top-16'>
               <img
                 src='/images/newherobanner.png'
                 alt='girl listening to music'

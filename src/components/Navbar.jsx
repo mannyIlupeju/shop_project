@@ -91,7 +91,6 @@ const Navbar = ({
 
   
   const openNav = () => {
-    console.log('triggered')
     setDisplayMenu(!displayMenu)
     setIconDisplay(!displayIcon)
   }
@@ -220,7 +219,6 @@ const Navbar = ({
       </div>
 
       {/* Responsive Menu */}
-
       {displayMenu ? (
         <motion.div
           className='text-white fixed z-50 top-32 -left-60 h-full w-full bg-slate-900 mx-auto container'

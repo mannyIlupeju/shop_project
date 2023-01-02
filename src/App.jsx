@@ -2,15 +2,16 @@ import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-rou
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 import OpenModal from './components/OpenModal';
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useRef} from 'react';
 import Products from './products/Products';
 import { shopItemList, futureProofAudio } from './products/Products';
 import {Home, About, Contact, Notfound, Shop, Login, SignUp} from './pages';
-import {SkullCandyh1, SkullCandygrey, SkullCandyEarphones, SkullCandyBlue, SmartWatch, SkullCandySpeakers, Earbuds, Headphones} from './products/ProductPages';
+import {SkullCandyh1, SkullCandygrey} from './products/ProductPages';
 import ProductOptionList from './components/Shared/CartList/ProductOptionList';
 import Subscription from './components/Shared/Subscription';
 import CartModal from './components/Shared/CartList/CartModal';
 import Cart from './components/Shared/CartList/Cart';
+import emailjs from "@emailjs/browser";
 
 
 
@@ -42,7 +43,7 @@ function App() {
   });
 
   //subscription modal state
-    const [message, setMessage] = useState();
+  const [message, setMessage] = useState();
 
   //Cart functions
   //Increase amount functionality
@@ -67,13 +68,9 @@ function App() {
     console.log(saved);
   };
 
-  
-
   useEffect(() => {
     localStorage.setItem("saved", JSON.stringify(saved));
   }, [saved]);
-
-
 
   //Modal function when it is clicked
   useEffect(() => {
@@ -82,8 +79,66 @@ function App() {
     }
   }, [IsOpenModal]);
 
+  //Email submission
+  //email submission function
+  const [email, setEmail] = useState("");
+
+  const readEmail = (e) => {
+    setEmail(e.target.value);
+  };
 
   
+  //Contact form 
+  const form = useRef();
+
+  const subscribeFn = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_38rwxo3",
+        "template_bxqifjn",
+        form.current,
+        "NZMy4bqwAbYcWuKMX"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          if (result.text) {
+            setMessage(result.text);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+
+  
+  //Contact form submission
+
+  const contactForm= useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+    .sendForm(
+        "service_jw12arq",
+        "template_5f4e6od",
+        form.current,
+        "8GdOjfM8cDUsVXlZb"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+
 
 
   return (
@@ -124,7 +179,11 @@ function App() {
                   element={<Shop shopList={shopItemList} />}
                 />
                 <Route path='/about' exact element={<About />} />
-                <Route path='/contact' exact element={<Contact />} />
+                <Route
+                  path='/contact'
+                  exact
+                  element={<Contact contactForm={contactForm} sendEmail={sendEmail}/>}
+                />
                 <Route path='/notfound' exact element={<Notfound />} />
                 <Route path='/login' exact element={<Login />} />
                 <Route path='/signup' exact element={<SignUp />} />
@@ -157,23 +216,6 @@ function App() {
                     />
                   }
                 />
-                <Route path='/earbuds' exact element={<Earbuds />} />
-                <Route path='/headphones' exact element={<Headphones />} />
-                <Route
-                  path='/skullcandyspeakers'
-                  exact
-                  element={<SkullCandySpeakers />}
-                />
-                <Route
-                  path='/skullcandyearphones'
-                  exact
-                  element={<SkullCandyEarphones />}
-                />
-                <Route
-                  path='/skullcandyblue'
-                  exact
-                  element={<SkullCandyBlue />}
-                />
                 <Route
                   path='/cart'
                   exact
@@ -194,9 +236,17 @@ function App() {
               </Routes>
             </main>
 
-            <Subscription message={message} setMessage={setMessage}/>
+            <Subscription message={message} setMessage={setMessage} />
 
-            <Footer message={message} setMessage={setMessage}/>
+            <Footer
+              message={message}
+              setMessage={setMessage}
+              subscribeFn={subscribeFn}
+              readEmail={readEmail}
+              email={email}
+              setEmail={setEmail}
+              form={form}
+            />
           </div>
         </Router>
 

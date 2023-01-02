@@ -149,7 +149,7 @@ export const shopItemList = [
     altImage1: "images/speaker2.webp",
     altImage2: "images/speaker3.webp",
     altImage3: "images/speaker4.webp",
-    link: "/skullcandyblue",
+    
   },
   {
     id: 0.4,
@@ -298,7 +298,7 @@ export const futureProofAudio = [
 
   {
     id: 3,
-    images: "images/pexels-sound-on-3756770.jpeg",
+    images: "images/minh.jpg",
     className: "imageBox box3",
     alt: "SkullCandy earphones",
   },

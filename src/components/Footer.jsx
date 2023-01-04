@@ -61,7 +61,7 @@ const Footer = ({message, setMessage}) => {
   return (
     <div className='container-width h-fit bg-slate-900 text-gray-400'>
       <motion.div
-        className='md:grid-cols-3 grid-cols-1 grid-rows-3 sm:grid-rows-1 gap-x-20 gap-y-10 grid justify-items-center p-8'
+        className='flex sm:flex-row flex-col justify-around p-5 gap-y-8'
         variants={footerVariants}
         initial={"hidden"}
         whileInView={"visible"}
@@ -97,17 +97,17 @@ const Footer = ({message, setMessage}) => {
             </div>
           </div>
         </div>
-        <div className='col-start-2'>
-          <div className='grid grid-cols-2'>
-            <div className='grid col-start-2'>
+        <div className=''>
+          <div className=''>
+            <div className=''>
               <p>About</p>
               <p>Careers</p>
             </div>
           </div>
         </div>
-        <div className='col-start-3 r'>
+        <div className='col-start-3 '>
           <div>
-            <div className='text-center'>
+            <div className='sm:text-center'>
               <h1>Follow Us</h1>
             </div>
             <div className='flex flex-row gap-x-5 my-4'>

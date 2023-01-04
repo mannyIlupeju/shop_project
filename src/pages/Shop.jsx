@@ -18,7 +18,7 @@ const Shop = ({shopList}) => {
         <div className='font-extrabold text-center text-4xl p-10'>
           <h2>SHOP ALL</h2>
         </div>
-        <div className='grid grid-cols-2 relative -left-6 gap-y-10 p-10 -mt-5 text-sm 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 w-max 2xl:gap-x-40 gap-x-10 xl:grid mx-auto justify-center'>
+        <div className='grid grid-cols-1 relative -left-6 gap-y-10 p-10 -mt-5 text-sm sm:grid-cols-2 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 w-max 2xl:gap-x-40 gap-x-10 xl:grid mx-auto justify-center'>
           <Link to='/earbuds'>
             <button className='button-6 '>EARBUDS</button>
           </Link>

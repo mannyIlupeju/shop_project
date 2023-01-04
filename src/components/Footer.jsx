@@ -1,12 +1,47 @@
 import { FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import { useState, useEffect,useRef } from "react";
+import { useState, useRef } from "react";
 import {motion} from 'framer-motion'
 
 
 
-const Footer = ({message, setMessage, subscribeFn, email, setEmail, readEmail, form}) => {
+const Footer = ({message, setMessage}) => {
+  //Email State
+  const [email, setEmail] = useState("");
+
   
+  //Contact form
+  const form = useRef();
+  
+  
+  //subscription function
+  const subscribeFn = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_38rwxo3",
+        "template_bxqifjn",
+        form.current,
+        "uU1BC1LZILc0BENN2"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          if (result.text) {
+            setMessage(result.text);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  //read email in input field
+  const readEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
   //Footer Animation
   const footerVariants = {
     hidden: {
@@ -15,24 +50,24 @@ const Footer = ({message, setMessage, subscribeFn, email, setEmail, readEmail, f
     },
     visible: {
       y: 0,
-      opacity:1,
+      opacity: 1,
       transition: {
         duration: 1,
-        ease: 'easeIn',
-      }
-    }
-  }
-
+        ease: "easeIn",
+      },
+    },
+  };
 
   return (
     <div className='container-width h-fit bg-slate-900 text-gray-400'>
-      <motion.div className='grid-cols-3 gap-x-20 grid justify-items-center p-8'
-      variants={footerVariants}
-      initial={'hidden'}
-      whileInView={'visible'}
-      viewport={{once: false}}
+      <motion.div
+        className='md:grid-cols-3 grid-cols-1 grid-rows-3 sm:grid-rows-1 gap-x-20 gap-y-10 grid justify-items-center p-8'
+        variants={footerVariants}
+        initial={"hidden"}
+        whileInView={"visible"}
+        viewport={{ once: false }}
       >
-        <div className='grid-col-1 footer-bar'>
+        <div className='col-start-1 row-start-1 footer-bar'>
           <div className=''>
             <div className=' mb-2'>
               <h1>Hear It First</h1>
@@ -62,21 +97,15 @@ const Footer = ({message, setMessage, subscribeFn, email, setEmail, readEmail, f
             </div>
           </div>
         </div>
-        <div className='grid-col-2'>
-          <div className='grid grid-cols-3'>
-            <div className='grid gap-y-4 col-start-1'>
-              <p>Help Center</p>
-              <p>Contact Us</p>
-              <p>Product Help</p>
-              <p>Warranty</p>
-            </div>
-            <div className='grid col-start-3'>
+        <div className='col-start-2'>
+          <div className='grid grid-cols-2'>
+            <div className='grid col-start-2'>
               <p>About</p>
               <p>Careers</p>
             </div>
           </div>
         </div>
-        <div className='grid-col-3'>
+        <div className='col-start-3 r'>
           <div>
             <div className='text-center'>
               <h1>Follow Us</h1>

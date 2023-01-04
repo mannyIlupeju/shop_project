@@ -1,17 +1,55 @@
-//Not complete - Open modal functionality when button is clicked - remove scrollbar and set overlay
 
-
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
+import emailjs from "@emailjs/browser";
 
 import { FaTimes } from 'react-icons/fa'
 
-function OpenModal({modal, openModal, setButtonModal, setOpenModal}) {
-  
+function OpenModal({
+  modal,
+  openModal,
+  setButtonModal,
+  setOpenModal,
+  message,
+  setMessage
+}) {
+  const [email, setEmail] = useState("");
+
   const toggleModal = () => {
     setOpenModal(!openModal);
     setButtonModal(false);
   };
 
+  const form = useRef();
+
+  //subscription function
+  const subscribeFn = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_38rwxo3",
+        "template_bxqifjn",
+        form.current,
+        "uU1BC1LZILc0BENN2"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          if (result.text) {
+            setMessage(result.text);
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  //read email in input field
+  const readEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  console.log(message)
 
   return (
     <>
@@ -20,7 +58,12 @@ function OpenModal({modal, openModal, setButtonModal, setOpenModal}) {
           <div className='btn fixed bottom-2 z-50' onClick={toggleModal}>
             <h3>GET 20% OFF NOW</h3>
             <div className='relative -top-3 left-2'>
-              <FaTimes size={13} />
+              <FaTimes
+                size={13}
+                onClick={() => {
+                  setButtonModal(true);
+                }}
+              />
             </div>
           </div>
         </div>
@@ -63,12 +106,14 @@ function OpenModal({modal, openModal, setButtonModal, setOpenModal}) {
 
           <div className='flex justify-center'>
             <div className='my-4'>
-              <form>
+              <form ref={form} onSubmit={subscribeFn}>
                 <input
                   type='email'
                   id='email'
                   style={{ width: "20.75rem" }}
                   required
+                  value={email}
+                  onChange={readEmail}
                 />
               </form>
             </div>

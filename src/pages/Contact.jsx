@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import Button from '../components/Shared/Button';
 
 
-const Contact = ({contactForm, sendEmail}) => {
+const Contact = () => {
 
   return (
     <div className='h-screen flex justify-center mb-20'>
@@ -20,7 +20,7 @@ const Contact = ({contactForm, sendEmail}) => {
         </div>
 
         <div className='flex justify-center mt-8'>
-          <form ref={contactForm} onSubmit={sendEmail}>
+          <form>
             {/* Name */}
             <div className='flex flex-col text-center sm:flex-row gap-x-5'>
               <div className=''>

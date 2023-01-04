@@ -27,7 +27,7 @@ function About() {
   return (
     <>
       <div className='container-width h-screen'>
-        <div className='mt-32 grid grid-cols-2 grid-rows-7 h-screen p-5'>
+        <div className='mt-32 grid grid-cols-1 lg:grid-cols-2 grid-rows-7 h-screen p-5'>
           <div className='col-start-1 col-span-1 row-start-1 row-span-4 aboutBanner3'></div>
           <div className='col-start-1 col-span-1 row-start-5 row-span-4 aboutBanner2 '></div>
           <div className='col-start-2 col-span-1 row-start-1 row-span-6 bg-white'>
@@ -42,7 +42,7 @@ function About() {
               initial={'hidden'}
               whileInView={'visible'}
               viewport={{once:true}}>
-                <h1 className='text-6xl font-extrabold'>
+                <h1 className='lg:text-6xl text-4xl font-extrabold'>
                   <span className='textGradient bg-clip-text'>
                     We believe in tuning in
                   </span>

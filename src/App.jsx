@@ -79,67 +79,13 @@ function App() {
     }
   }, [IsOpenModal]);
 
-  //Email submission
-  //email submission function
-  const [email, setEmail] = useState("");
-
-  const readEmail = (e) => {
-    setEmail(e.target.value);
-  };
+ 
 
   
-  //Contact form 
-  const form = useRef();
-
-  const subscribeFn = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_38rwxo3",
-        "template_bxqifjn",
-        form.current,
-        "NZMy4bqwAbYcWuKMX"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          if (result.text) {
-            setMessage(result.text);
-          }
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
 
 
   
-  //Contact form submission
-
-  const contactForm= useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-    .sendForm(
-        "service_jw12arq",
-        "template_5f4e6od",
-        form.current,
-        "8GdOjfM8cDUsVXlZb"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
-
-
+ 
 
   return (
     <>
@@ -182,7 +128,9 @@ function App() {
                 <Route
                   path='/contact'
                   exact
-                  element={<Contact contactForm={contactForm} sendEmail={sendEmail}/>}
+                  element={
+                    <Contact  />
+                  }
                 />
                 <Route path='/notfound' exact element={<Notfound />} />
                 <Route path='/login' exact element={<Login />} />
@@ -241,11 +189,6 @@ function App() {
             <Footer
               message={message}
               setMessage={setMessage}
-              subscribeFn={subscribeFn}
-              readEmail={readEmail}
-              email={email}
-              setEmail={setEmail}
-              form={form}
             />
           </div>
         </Router>
@@ -255,6 +198,9 @@ function App() {
           setButtonModal={setButtonModal}
           openModal={IsOpenModal}
           setOpenModal={setOpenModal}
+          message={message}
+          setMessage={setMessage}
+        
         />
       </div>
     </>

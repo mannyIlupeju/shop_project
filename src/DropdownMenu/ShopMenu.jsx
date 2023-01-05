@@ -43,7 +43,7 @@ function Shop() {
         <div>
           <div className=''>
             <div>Merch</div>
-            <Link to='/clothing' className='hoverItem'>
+            <Link to='' className='hoverItem'>
               <h3 className='font-bold'>Shop all Clothing</h3>
             </Link>
           </div>
@@ -52,7 +52,7 @@ function Shop() {
         <div>
           <div className=''>
             <div>Gaming</div>
-            <Link to='/gaming' className='hoverItem'>
+            <Link to='' className='hoverItem'>
               <h3 className='font-bold'>Shop all Gaming</h3>
             </Link>
           </div>

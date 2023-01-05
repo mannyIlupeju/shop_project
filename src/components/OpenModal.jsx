@@ -49,7 +49,7 @@ function OpenModal({
     setEmail(e.target.value);
   };
 
-  console.log(message)
+
 
   return (
     <>

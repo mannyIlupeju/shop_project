@@ -6,7 +6,7 @@ import { useState, useEffect, useRef} from 'react';
 import Products from './products/Products';
 import { shopItemList, futureProofAudio } from './products/Products';
 import {Home, About, Contact, Notfound, Shop, Login, SignUp} from './pages';
-import {SkullCandyh1, SkullCandygrey} from './products/ProductPages';
+import {SkullCandyh1, SkullCandygrey, Headphones, Earbuds, Accessories} from './products/ProductPages';
 import ProductOptionList from './components/Shared/CartList/ProductOptionList';
 import Subscription from './components/Shared/Subscription';
 import CartModal from './components/Shared/CartList/CartModal';
@@ -163,6 +163,22 @@ function App() {
                       setValue={setValue}
                     />
                   }
+                />
+
+                <Route path='/headphones'
+                exact element = {
+                  <Headphones/>
+                }
+                />
+                <Route path='/earbuds'
+                exact element = {
+                  <Earbuds/>
+                }
+                />
+                <Route path='/accessories'
+                exact element = {
+                  <Accessories/>
+                }
                 />
                 <Route
                   path='/cart'

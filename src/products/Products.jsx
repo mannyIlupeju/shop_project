@@ -80,12 +80,12 @@ export const shopItemList = [
     thumbnail: "images/coloredskullcandy.webp",
     productOptions: [
       {
-        id: "0.01",
+        id: 0.01,
         optionName: "Skull Red",
         altImage: "images/headphones_a_4.webp",
       },
       {
-        id: "0.02",
+        id: 0.02,
         optionName: "Skull White",
         altImage: "images/headphones_c_2.webp",
       },
@@ -109,19 +109,19 @@ export const shopItemList = [
 
     productOptions: [
       {
-        id: 1,
+        id: 14,
         optionName: "Skull Red",
         altImage: "images/headphones_a_4.webp",
         alt: "red skullcandy headphones ",
       },
       {
-        id: 2,
+        id: 52,
         optionName: "Skull White",
         altImage: "images/headphones_c_2.webp",
         alt: "white skullcandy headphones ",
       },
       {
-        id: 3,
+        id: 63,
         optionName: "Skull Grey-2",
         altImage: "images/headphones_b_2.webp",
         alt: "grey skullcandy headphones ",
@@ -221,7 +221,7 @@ export const shopItemList = [
     altImage3: "images/watch_3.webp",
   },
   {
-    id: 0.10,
+    id: 0.11,
     name: "SkullCandy",
     price: 60,
     mainImage: "images/skullcandyheadphones 3.webp",
@@ -233,7 +233,7 @@ export const shopItemList = [
     altImage3: "images/headphones_b_2.webp",
   },
   {
-    id: 0.11,
+    id: 0.12,
     name: "Charger pod",
     price: 60,
     mainImage: "images/accessory-fixrapidGMax1.webp",
@@ -242,7 +242,7 @@ export const shopItemList = [
     desc: "Charger pod",
   },
   {
-    id: 0.12,
+    id: 0.13,
     name: "Ultra Latency charger pod",
     price: 30,
     mainImage: "images/accessory-ultralowlatency.webp",
@@ -251,7 +251,7 @@ export const shopItemList = [
     desc: "Lightning fast USB",
   },
   {
-    id: 0.13,
+    id: 0.14,
     name: "SkullCandy",
     price: 90,
     mainImage: "images/earphones_b_2.webp",
@@ -260,7 +260,7 @@ export const shopItemList = [
     desc: "earbuds",
   },
   {
-    id: 0.14,
+    id: 0.15,
     name: "SkullCandy",
     price: 90,
     mainImage: "images/earphones_b_1.webp",
@@ -269,7 +269,7 @@ export const shopItemList = [
     desc: "earbuds",
   },
   {
-    id: 0.15,
+    id: 0.16,
     name: "SkullCandy",
     price: 90,
     mainImage: "images/earphones_a_3.webp",

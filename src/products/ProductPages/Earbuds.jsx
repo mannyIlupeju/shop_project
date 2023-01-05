@@ -1,9 +1,13 @@
-import React from 'react'
-import { shopItemList } from '../Products'
-import {Link} from 'react-router-dom'
+import React from "react";
+import { shopItemList } from "../Products";
+import { Link } from "react-router-dom";
 
-function Headphones() {
-  let headphoneProduct = shopItemList.filter((item)=> item.tags === 'Headphones')
+function Earbuds() {
+  console.log(shopItemList)
+  let earbudProduct = shopItemList.filter(
+    (item) => item.tags === 'earbuds'
+  );
+  console.log(earbudProduct);
   return (
     <div className='cursor-pointer grid-cols-1 mt-40'>
       <div className='grid grid-cols-2 gap-y-10 p-10 text-sm 2xl:grid-cols-4 w-max 2xl:gap-x-40 gap-x-10 xl:grid mx-auto justify-center'>
@@ -21,13 +25,13 @@ function Headphones() {
         </Link>
       </div>
       <div className='grid grid-cols-1 justify-items-center 2xl:grid-cols-2 gap-y-2 lg:gap-x-1 md:grid-cols-2 cursor-pointer text-gray-300'>
-        {headphoneProduct.map((item) => {
+        {earbudProduct.map((item) => {
           const { id, mainImage, alt, desc, price, link } = item;
-          console.log(id);
           return (
             <>
+            
               <Link to={link}>
-                <div className='flex flex-col my-20'>
+                <div key={id} className='flex flex-col my-20'>
                   <img
                     src={mainImage}
                     alt={alt}
@@ -53,4 +57,4 @@ function Headphones() {
   );
 }
 
-export default Headphones
+export default Earbuds;

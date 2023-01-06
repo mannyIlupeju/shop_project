@@ -91,7 +91,7 @@ function App() {
     <>
       <div>
         <Router>
-          <div className='flex flex-col overflow-x-hidden h-screen container-width mx-auto'>
+          <div className='flex flex-col bg-zinc-900 overflow-x-hidden h-screen container-width mx-auto'>
             <Navbar
               search={search}
               setSearch={setSearchBar}

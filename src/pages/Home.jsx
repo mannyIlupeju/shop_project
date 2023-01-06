@@ -69,7 +69,7 @@ const breakPoints = [
 
 const SectionTwo = ({ items, setItems }) => {
   return (
-    <div className='sm:px-20 px-10 flex flex-col lg:mx-auto container text-gray-300 h-min mt-40'>
+    <div className='sm:px-20 px-10 flex flex-col lg:mx-auto bg-zinc-900 container text-gray-300 h-min mt-40'>
       <div className=''>
         <motion.h2
           className='text-left text-3xl lg:text-6xl 2xl:text-6xl font-bold'
@@ -162,7 +162,7 @@ const SectionThree = () => {
   );
 
   return (
-    <div className='flex justify-center container-width mx-auto md:mt-40 text-gray-300'>
+    <div className='flex justify-center container-width bg-zinc-900 mx-auto md:mt-40 text-gray-300'>
       <div className='headlineThree'>
         <motion.div
           className='headLineText font-bold md:p-12 p-20 2xl:p-2'
@@ -211,7 +211,7 @@ const SectionThree = () => {
 
 const SectionFour = () => {
   return (
-    <motion.div className=' container-width flex mx-auto justify-center p-10 2xl:p-0 mt-40 mb-40'
+    <motion.div className=' container-width bg-zinc-900 flex mx-auto bg-slate-800 justify-center p-10 2xl:p-0 mt-40 mb-40'
     variants={heroImageVariants2}
     initial="hidden"
     whileInView={"visible"}

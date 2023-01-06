@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b75247b2.css",
+    "main.js": "/static/js/main.70e33c6e.js",
+    "static/media/skullcandy1.jpeg": "/static/media/skullcandy1.7e0c1c6da29ab668f17b.jpeg",
+    "static/media/Untitled design (5).png": "/static/media/Untitled design (5).0d51ef1918f2434e143e.png",
+    "static/media/secondproductpagebg.jpeg": "/static/media/secondproductpagebg.96b3628c2b3c28fd50f3.jpeg",
+    "static/media/greyskulliesppage.jpeg": "/static/media/greyskulliesppage.1e738d20e0c33e45abd9.jpeg",
+    "static/media/greyskulliesppage2.jpeg": "/static/media/greyskulliesppage2.5f85da54a1484e6d3235.jpeg",
+    "static/media/ATH_G1_emotional_01-scaled.jpeg": "/static/media/ATH_G1_emotional_01-scaled.c166c09ab2252ed15a3e.jpeg",
+    "static/media/playing video game image.jpeg": "/static/media/playing video game image.2af03d4f7c42c3c4eb12.jpeg",
+    "index.html": "/index.html",
+    "main.b75247b2.css.map": "/static/css/main.b75247b2.css.map",
+    "main.70e33c6e.js.map": "/static/js/main.70e33c6e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b75247b2.css",
+    "static/js/main.70e33c6e.js"
+  ]
+}

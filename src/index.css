@@ -234,6 +234,10 @@ background: linear-gradient(167deg, rgba(248,247,250,1) 0%, rgba(19,65,130,1) 0%
   transform: scaleX(5)
 }
 
+.responsiveMenu:hover {
+  color: yellow;
+}
+
 
 
 /*Shop*/

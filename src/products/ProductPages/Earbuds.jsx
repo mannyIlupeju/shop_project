@@ -17,7 +17,7 @@ function Earbuds() {
         <Link to='/headphones'>
           <button className='button-6 '>HEADPHONES</button>
         </Link>
-        <Link to='/clothing'>
+        <Link to=''>
           <button className='button-6 '>CLOTHING</button>
         </Link>
         <Link to='/accessories'>

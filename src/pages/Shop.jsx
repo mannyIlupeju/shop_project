@@ -13,7 +13,7 @@ const imageVariants = {
 
 const Shop = ({shopList}) => {
   return (
-    <div className=' h-full container mx-auto w-screen sm:relative sm:left-10 text-gray-300'>
+    <div className=' h-full container-width mx-auto w-screen sm:relative sm:left-10 text-gray-300'>
       <div className='mt-32'>
         <div className='font-extrabold text-center text-4xl p-10'>
           <h2>SHOP ALL</h2>

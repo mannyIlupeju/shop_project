@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 function Earbuds() {
   console.log(shopItemList);
-  let accessoriesProduct = shopItemList.filter((item) => item.tags === "Accessories");
+  let accessoriesProduct = shopItemList.filter(
+    (item) => item.tags === "Accessories"
+  );
   
   return (
     <div className='cursor-pointer grid-cols-1 mt-40'>
@@ -15,7 +17,7 @@ function Earbuds() {
         <Link to='/headphones'>
           <button className='button-6 '>HEADPHONES</button>
         </Link>
-        <Link to='/clothing'>
+        <Link to=''>
           <button className='button-6 '>CLOTHING</button>
         </Link>
         <Link to='/accessories'>

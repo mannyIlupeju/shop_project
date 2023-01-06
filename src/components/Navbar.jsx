@@ -171,7 +171,7 @@ const Navbar = ({
                   <NavLink
                     onMouseOver={mouseOver}
                     to='/contact'
-                    className='nav-item'
+                    className='responsiveMenu'
                   >
                     Contact
                   </NavLink>
@@ -233,7 +233,7 @@ const Navbar = ({
                   <NavLink
                     onMouseOver={mouseOver}
                     to='/home'
-                    className='nav-item '
+                    className='responsiveMenu '
                   >
                     New Releases
                   </NavLink>
@@ -245,7 +245,7 @@ const Navbar = ({
                   <NavLink
                     onMouseOver={mouseOver}
                     to='/shop'
-                    className='nav-item '
+                    className='responsiveMenu '
                   >
                     Shop
                   </NavLink>
@@ -257,7 +257,7 @@ const Navbar = ({
                   <NavLink
                     onMouseOver={mouseOver}
                     to='/about'
-                    className='nav-item'
+                    className='responsiveMenu'
                   >
                     About
                   </NavLink>
@@ -269,7 +269,7 @@ const Navbar = ({
                   <NavLink
                     onMouseOver={mouseOver}
                     to='/contact'
-                    className='nav-item'
+                    className='responsiveMenu'
                   >
                     Contact
                   </NavLink>

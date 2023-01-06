@@ -38,7 +38,7 @@ const heroImageVariants = {
 
 const HeroBanner = () => {
   return (
-    <div className='mx-auto bg-slate-800 text-gray-300 container-width h-fit w-full'>
+    <div className='mx-auto bg-zinc-900 text-gray-300 container-width h-fit w-full'>
       <div className='p-16 '>
         <div className='text-neutral-content justify-center flex flex-col 2xl:flex-row xl:flex-row lg:flex-row leading-loose mx-15 w-screen'>
           {/**Setting up the hero banner headline */}
